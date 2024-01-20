@@ -7,3 +7,5 @@
 ## formatter (;)
 
 ## scss reset, variables, grid, colors, mixins...
+
+## handlebars setup
