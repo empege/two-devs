@@ -1,4 +1,4 @@
-# Two Devs ⚁
+# ⚀ Two Devs ⚀
 
 Project (in the making) by two friends - Aleksandar🍼 and Ivan👩‍🦲 - one striving to become a full fledged FE Dev, the other a medior that wants to go through the basics again and help a friend leave his shi\*\*y job so he can also experience digital suffering 🙂.
 
@@ -6,7 +6,7 @@ Aleksandar will learn about HTML, CSS and JS (vanilla for now) and try to immedi
 
 Ivan will practice setting up the project, adding important missed points and some more examples.
 
-Hopefully this can be used in the future as reference for two of us, but also anyone else that can find this useful.
+Hopefully this can be used in the future as reference for the two of us, but also anyone else that can find this useful.
 
 Let's learn together and enjoy while at it! ✨✨✨
 
