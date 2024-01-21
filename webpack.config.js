@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-
 module.exports = {
   mode: 'development',
   entry: {
@@ -50,6 +49,7 @@ module.exports = {
     ]
   },
   plugins: [
+    // Usefull for not having index.html in build. I wanna delete whole build and still have index.html remade, and also I want to add some things in there that always remain when being recreated.
     new HtmlWebpackPlugin({
       title: '⚀ Two Devs ⚀',
       filename: 'index.html',
