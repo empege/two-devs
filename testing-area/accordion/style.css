@@ -1,65 +1,66 @@
 body {
-    background-color: rgb(234, 239, 216);
-    text-align: center;
+  background-color: rgb(234, 239, 216);
+  text-align: center;
 }
 
 h2 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 ul {
-    list-style-position: inside;
+  list-style-position: inside;
 }
 
 li {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 li:hover {
-    text-transform: uppercase;
-    transform:scale(1.3);
-    transition-duration: 1.3s;
+  text-transform: uppercase;
+  transform: scale(1.3);
+  transition-duration: 1.3s;
 }
 
 /* Pitanja */
 .accordion {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    text-transform: uppercase;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  text-transform: uppercase;
 }
 
 /* Prevlacenje misa preko pitanja */
-.active, .accordion:hover {
-    background-color: darkgrey;
+.active,
+.accordion:hover {
+  background-color: darkgrey;
 }
 
 /* Ikonica za plus */
 .accordion:after {
-    content: '\002B';
-    color: white;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
 }
 
 /* Ikonica za minus */
 .active:after {
-    content: '\2212';
+  content: '\2212';
 }
 
 /* Odgovori na pitanja */
 .panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    text-align: left;
-  }
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  text-align: left;
+}

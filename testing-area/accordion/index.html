@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Beginner HTML</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="javascript.js" defer></script>
-    </head>
-    <body>
-        <h2 id="proba">What's this?</h2>
-        <p>This is an example of HTML!</p>
-        <h3>What are we learning?</h3>
-        <ul>
-            <li>How to code</li>
-            <li>How to style</li>
-        </ul>
-        <script>
-            const proba = document.getElementById("proba");
-            console.log(proba.parentNode);
+  <head>
+    <title>Beginner HTML</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <h2 id="proba">What's this?</h2>
+    <p>This is an example of HTML!</p>
+    <h3>What are we learning?</h3>
+    <ul>
+      <li>How to code</li>
+      <li>How to style</li>
+    </ul>
+    <script>
+      const proba = document.getElementById('proba')
+      console.log(proba.parentNode)
 
-            proba.addEventListener("mouseover", function(){console.log("You passed over")});
-        </script>
-    
-        <button class="accordion">Question 1</button>
-        <div class="panel">
-            <p>Answer to question 1.</p>
-        </div>
-        <button class="accordion">Question 2</button>
-        <div class="panel">
-            <p>Answer to question 2.</p>
-        </div>
-        <button class="accordion">Question 3</button>
-        <div class="panel">
-            <p>Answer to question 3.</p>
-        </div>
-        
-    </body>
+      proba.addEventListener('mouseover', function () {
+        console.log('You passed over')
+      })
+    </script>
+
+    <!-- Name this as accordion__item, and add container element with class accordion. Update css and js so that it still works as expected -->
+    <button class="accordion">Question 1</button>
+    <div class="panel">
+      <p>Answer to question 1.</p>
+    </div>
+    <button class="accordion">Question 2</button>
+    <div class="panel">
+      <p>Answer to question 2.</p>
+    </div>
+    <button class="accordion">Question 3</button>
+    <div class="panel">
+      <p>Answer to question 3.</p>
+    </div>
+  </body>
 </html>
