@@ -22,7 +22,7 @@ li:hover {
 }
 
 /* Pitanja */
-.accordion {
+.accordion__item {
   background-color: black;
   color: white;
   cursor: pointer;
@@ -37,12 +37,12 @@ li:hover {
 
 /* Prevlacenje misa preko pitanja */
 .active,
-.accordion:hover {
+.accordion__item:hover {
   background-color: darkgrey;
 }
 
 /* Ikonica za plus */
-.accordion:after {
+.accordion__item:after {
   content: '\002B';
   color: white;
   font-weight: bold;
