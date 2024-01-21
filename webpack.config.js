@@ -45,6 +45,15 @@ module.exports = {
           }
         }],
         exclude: /node_modules/
+      },
+      {
+        test: /\.hbs$/,
+        use: {
+          loader: "handlebars-loader",
+          // query: {
+          // inlineRequires: "/images/" // ??? Check this option ???
+          // }
+        }
       }
     ]
   },
@@ -53,7 +62,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: '⚀ Two Devs ⚀',
       filename: 'index.html',
-      template: 'src/index.html'
+      template: 'src/index.hbs'
     }),
     // new BundleAnalyzerPlugin(), // If you want to see visual representation of what takes how much space etc
   ]

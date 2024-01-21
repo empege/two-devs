@@ -1,0 +1,15 @@
+@mixin ellipsis($numberOfLines: 1) {
+  // Ellipsis: … (shorten single-line text with three dots to fit parent)
+  @if $numberOfLines == 1 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  } @else {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $numberOfLines;
+    overflow: hidden;
+  }
+}

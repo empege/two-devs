@@ -2,10 +2,6 @@
 
 ## `<meta>` tag
 
-## utils - console.log :)
-
 ## formatter (;)
 
 ## scss reset, variables, grid, colors, mixins...
-
-## handlebars setup

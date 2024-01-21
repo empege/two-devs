@@ -1,0 +1,83 @@
+// Variables
+
+// Max break point
+$break-xs: 450px;
+$break-s: 576px;
+$break-sm: 650px;
+$break-m: 767px;
+$break-l: 1024px;
+$break-xl: 1440px;
+
+// Up
+@mixin phone-xs-up {
+  @media screen and (min-width: $break-xs) {
+    @content;
+  }
+}
+
+@mixin phone-up {
+  @media screen and (min-width: $break-s) {
+    @content;
+  }
+}
+
+@mixin phone-l-up {
+  @media screen and (min-width: $break-sm) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media screen and (min-width: $break-m) {
+    @content;
+  }
+}
+
+@mixin laptop-up {
+  @media screen and (min-width: $break-l) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media screen and (min-width: $break-xl) {
+    @content;
+  }
+}
+
+// Down
+@mixin phone-xs-down {
+  @media screen and (max-width: ($break-xs - 1)) {
+    @content;
+  }
+}
+
+@mixin phone-down {
+  @media screen and (max-width: ($break-s - 1)) {
+    @content;
+  }
+}
+
+@mixin phone-l-down {
+  @media screen and (max-width: ($break-sm - 1)) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media screen and (max-width: ($break-m - 1)) {
+    @content;
+  }
+}
+
+@mixin laptop-down {
+  @media screen and (max-width: ($break-l - 1)) {
+    @content;
+  }
+}
+
+@mixin desktop-down {
+  @media screen and (max-width: ($break-xl - 1)) {
+    @content;
+  }
+}
