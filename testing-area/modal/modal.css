@@ -9,7 +9,6 @@
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
-    cursor: pointer;
     padding-top: 250px;
 }
 
@@ -33,4 +32,8 @@
     font-size: 50px;
     border-style: none;
     padding: 20px;
+}
+
+button {
+    cursor: pointer;
 }
