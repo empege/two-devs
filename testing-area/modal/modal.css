@@ -8,7 +8,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
-    z-index: 2;
+    z-index: 1;
     padding-top: 250px;
 }
 
@@ -16,7 +16,7 @@
     background-color: white;
     margin: auto;
     padding: 20px;
-    width: 80%;
+    width: 500px;
 }
 
 .close-button {
@@ -27,11 +27,15 @@
 }
 
 #myBtn {
-    background-color: rgb(148, 207, 61);
+    background-color: rgb(153, 219, 54);
     color: white;
-    font-size: 50px;
+    font-size: 30px;
+    font-weight: bold;
     border-style: none;
     padding: 20px;
+    margin-left: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-transform: uppercase;
 }
 
 button {
