@@ -20,5 +20,73 @@
         <h2>How to write HTML?</h2>
         <p>A simple text editor is all that we need to start learning HTML. </p>
       </div>
+      <div class="html-documents">
+        <h2>HTML Documents</h2>
+        <p>All HTML documents must start with a document type declaration: &lt;!DOCTYPE html&gt;. It represents the document type and helps browsers display web pages correctly. It MUST only appear once at the top of the page before any HTML tags. It is not case sensitive, which means you can write it in lowercase.</p>
+        <h3>An example of a HTML5 document</h3>
+        <pre>
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+          &lt;body&gt;
+
+          &lt;h1&gt;My First Heading&lt;/h1&gt;
+          &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </pre>
+        <h2>HTML Headings</h2>
+        <p>HTML Headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags. &lt;h1&gt; defines the most important heading, the &lth6&gt; the least important. </p>
+        <pre>
+          &lt;h1&gt;This is heading 1&lt;/h1&gt;
+          &lt;h2&gt;This is heading 2&lt;/h2&gt;
+          &lt;h3&gt;This is heading 3&lt;/h3&gt;
+          &lt;h4&gt;This is heading 4&lt;/h4&gt;
+          &lt;h5&gt;This is heading 5&lt;/h5&gt;
+          &lt;h6&gt;This is heading 6&lt;/h6&gt;
+        </pre>
+        <p><important>Note:</important> Only use one &lt;h1&gt; per page. In addition to making our website more user-friendly, html headings can also help to improve our <abbr title="Search Engine Optimization">SEO.</abbr> Search Engine Optimization is the process of improving our website to increase its visibility in Google and other search engines whenever users search for products, information, services etc.</p>
+        <p>The most common example of on-page SEO is optimizing a piece of content to a specific keyword. For example, We're making a HTML tutorial website, our keyword might be “html tutorial.” We'd include that keyword in our page's title, slug, meta description, headers, and body.</p>
+      </div>
+      <h2>HTML Paragraphs</h2>
+      <p>HTML paragraphs are defined with the &lt;p&gt; tag. It defines a paragraph of text.</p>
+      <pre>
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;
+        &lt;p&gt;This is another paragraph.&lt;/p&gt;
+      </pre>
+      <h2>HTML Links</h2>
+      <p>HTML links are defined with the &lt;a&gt; tag. The &lt;a&gt; tag (anchor tag) in HTML is used to create a hyperlink on the webpage. This hyperlink is used to link the webpage to other web pages or some section of the same web page. The link's destination is specified in the href attribute:</p>
+      <pre>
+        &lt;a href="#"&gt;This is a link&lt;/a&gt;
+      </pre>
+      <h2>HTML Images</h2>
+      <p>HTML images are defined with the &lt;img&gt; tag. It is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web pages. The &lt;img&gt; tag creates a holding space for the referenced image. The &lt;img&gt; tag has two required attributes:</p>
+      <p>src - specifies the path to the image</p>
+      <p>alt - specifies an alternate text for the image, if the image for some reason cannot be displayed</p>
+      <p><important>Note:</important> Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.</p>
+      <pre>
+        &lt;img src="#" alt="alternate link" width="150" height="150"&gt;
+      </pre>
+      <h3>Let's combine everything we learned into one example!</h3>
+      <p>Our HTML source code should look like this:</p>
+      <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;title&gt;My Webpage&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+
+        &lt;h1&gt;Welcome to my Webpage!&lt;h1&gt;
+        &lt;p&gt;Are you a dog or a cat person?&lt;/p&gt;
+
+        &lt;img src="dogs-and/or-cats.jpg" alt="https://www.dogs-and-cats.org" width="300" height="180"&gt;
+
+        &lt;a href="https://wikipedia.org/dogs-and-cats"&gt;Learn more about dogs and cats here!&lt;/a&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </pre>
+      <p>The HTML document itself begins with &lt;html&gt; and ends with &lt;/html&gt;. The visible part of the HTML document is between &lt;body&gt; and &lt;body&gt;. The &lt;head&gt; element is a container for metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag. Metadata is data about the HTML document, such as the document title, character set, styles, scripts, and other meta information. Metadata is not displayed.</p>
     </body>
 </html>
