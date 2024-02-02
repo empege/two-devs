@@ -1,0 +1,28 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/grid.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary-color;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-img {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  &__nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+  }
+
+  &__nav-list-item {
+  }
+}

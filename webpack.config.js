@@ -16,7 +16,10 @@ module.exports = {
   mode: 'development',
   entry: {
     index: path.resolve(__dirname, 'src/index.js'), // If entry is an object, key is name of bundled file, and you can use it as [name] in output for example ⬇️
-    html: path.resolve(__dirname, 'src/pages/html/html.js')
+    html: path.resolve(__dirname, 'src/pages/html/html.js'),
+    css: path.resolve(__dirname, 'src/pages/css/css.js'),
+    javascript: path.resolve(__dirname, 'src/pages/javascript/javascript.js'),
+    about: path.resolve(__dirname, 'src/pages/about/about.js')
   },
   // entry: path.resolve(__dirname, 'src/index.js'), // Simpler way to define entry, without object
   output: {

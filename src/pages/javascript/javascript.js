@@ -11,4 +11,4 @@ import headerTemplate from "../../components/header/header.hbs";
 import '../../components/header/header'
 
 // Register components
-document.getElementById('HEADER').innerHTML = headerTemplate({ logo, title: 'JAVASCRIPT PAGE' })
+document.getElementById('HEADER').innerHTML = headerTemplate({ logo, title: 'Javascript' })

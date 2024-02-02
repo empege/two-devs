@@ -1,0 +1,5 @@
+@import './mixins.scss';
+
+.w-full {
+  @include width(24);
+}
