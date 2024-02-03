@@ -87,6 +87,35 @@
         &lt;/body&gt;
         &lt;/html&gt;
       </pre>
-      <p>The HTML document itself begins with &lt;html&gt; and ends with &lt;/html&gt;. The visible part of the HTML document is between &lt;body&gt; and &lt;body&gt;. The &lt;head&gt; element is a container for metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag. Metadata is data about the HTML document, such as the document title, character set, styles, scripts, and other meta information. Metadata is not displayed.</p>
+      <h2>HTML Meta tags</h2>
+      <p>The HTML document itself begins with &lt;html&gt; and ends with the &lt;/html&gt; tag. The visible part of the HTML document is between &lt;body&gt; and &lt;/body&gt;. The &lt;head&gt; element is a container for metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag. Metadata is data about the HTML document, such as the document title, character set, styles, scripts, and other meta information. Metadata is not displayed.</p>
+      <h3>Some examples of &lt;meta&gt; tags:</h3>
+      <pre>
+        &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt; defines words for search engines.<br>
+        &lt;meta name="description" content="Tutorial for HTML and CSS"&gt; defines a description of our webpage.<br>
+        &lt;meta name="author" content="Ivan and Aleksandar"&gt; defines the author(s) of a page.<br>
+        &lt;meta http-equiv="refresh" content="30"&gt; refreshes the document every 30 seconds.<br>
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; sets the viewport to make our website look good on all devices.
+      </pre>
+      <p>The viewport is the user's visible area of a webpage. It varies with the device, it is smaller on a smartphone than on a tablet or computer screen. It gives the browser instuctions how to control the page's dimensions and scaling.</p>
+      <p>The width=device-width part makes the width of the page follow the width of our device.</p>
+      <p>The initial-scale=1.0 sets the initial zoom level when the page is first loaded by our browser.</p>
+      <h2>Semantic Elements in HTML</h2>
+      <p>The semantic code (SEM) points to any element in a text that suggests a particular, often additional meaning by way of connotation. Many websites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header"&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer. However, &lt;div&gt; and &lt;span&gt; elements are non-semantic. By themselves, they tell nothing about their content.</p>
+      <p>Here are some semantic elements that we can use to define different parts of a web page:</p>
+          <ul style="float: left;">
+            <li>&lt;article&gt;</li>
+            <li>&lt;aside&gt;</li>
+            <li>&lt;details&gt;</li>
+            <li>&lt;figcaption&gt;</li>
+            <li>&lt;figure&gt;</li>
+            <li>&lt;footer&gt;</li>
+            <li>&lt;header&gt;</li>
+            <li>&lt;main&gt;</li>
+            <li>&lt;nav&gt;</li>
+            <li>&lt;section&gt;</li>
+          </ul>
+          <img src="https://www.w3schools.com/html/img_sem_elements.gif" />
+      
     </body>
 </html>
