@@ -103,7 +103,7 @@
       <h2>Semantic Elements in HTML</h2>
       <p>The semantic code (SEM) points to any element in a text that suggests a particular, often additional meaning by way of connotation. Many websites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header"&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer. However, &lt;div&gt; and &lt;span&gt; elements are non-semantic. By themselves, they tell nothing about their content.</p>
       <p>Here are some semantic elements that we can use to define different parts of a web page:</p>
-          <ul style="float: left;">
+          <ul>
             <li>&lt;article&gt;</li>
             <li>&lt;aside&gt;</li>
             <li>&lt;details&gt;</li>
@@ -115,7 +115,43 @@
             <li>&lt;nav&gt;</li>
             <li>&lt;section&gt;</li>
           </ul>
-          <img src="https://www.w3schools.com/html/img_sem_elements.gif" />
-      
+      <h3>A block of code that uses semantic elements:</h3>
+      <pre>
+        &lt;header&gt;&lt;/header&gt;
+        &lt;section&gt;
+            &lt;article&gt;
+              &lt;figure&gt;
+                &lt;img&gt;
+                &lt;figcaption&gt;&lt;/figcaption&gt;
+              &lt;/figure&gt;
+            &lt;/article&gt;
+          &lt;/section&gt;
+          &lt;footer&gt;&lt;/footer&gt;
+      </pre>
+      <h3>VS a block of code that uses non-semantic elements:</h3>
+      <pre>
+        &lt;div id="header"&gt;&lt;/div&gt;
+        &lt;div class="section"&gt;
+          &lt;div class="article"&gt;
+            &lt;div class="figure"&gt;
+              &lt;img&gt;
+              &lt;div class="figcaption"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="footer"&gt;&lt;/div&gt;
+      </pre>
+      <h2>What are the big differences?</h2>
+      <p>The first line of code is much easier to read! Imagine we have to read through hundreds or thousands of lines of code? The easier it is to read and understand that code, it makes our job easier!</p>
+      <p>Secondly, it has greater accessibity. Search engines and assistive technologies like screen readers are also able to better understand the context and content of our webiste.</p>
+      <p>Overall, semantic elements also lead to more consistent code.</p>
+      <h2>Let's break down the elements</h2>
+      <p>The &lt;header&gt; element is generally found at the top of a document, a section, or an article and usually contains the main heading and some navigation and search tools.</p>
+      <p>The &lt;nav&gt; element defines a set of navigation links. The &lt;nav&gt; element is intended only for major blocks of navigation links.</p>
+      <p>The &lt;aside&gt; element defines some content aside from the content it is placed in (like a sidebar) and it should be indirectly related to the surrounding content.</p>
+      <p>&lt;figure&gt; is for wrapping your image content around it, and &lt;figcaption&gt; is to caption your image.</p>
+      <p>A &lt;footer&gt; is generally found at the bottom of a document, a section, or an article. Just like the &lt;header&gt; the content is generally metainformation, such as author details, legal information, and/or links to related information.</p>
+      <p>The &lt;section&gt; element defines a section in a document. A section is a thematic grouping of content, typically with a heading, such as Chapters, Introduction, News items, Contact information.</p>
+      <p>The &lt;article&gt; element specifies independent, self-contained content. It can be used for Forum posts, Blog posts, User comments, Product cards, Newspaper articles.</p>
     </body>
 </html>
