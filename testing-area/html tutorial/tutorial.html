@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>HTML Tutorial</title>
+        <link rel="stylesheet" href="tutorial.css">
     </head>
     <body>
       <div class="page-header">
@@ -27,6 +28,9 @@
         <pre>
           &lt;!DOCTYPE html&gt;
           &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+          &lt;/head&gt;
           &lt;body&gt;
 
           &lt;h1&gt;My First Heading&lt;/h1&gt;
@@ -65,7 +69,7 @@
       <p>alt - specifies an alternate text for the image, if the image for some reason cannot be displayed</p>
       <p><important>Note:</important> Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.</p>
       <pre>
-        &lt;img src="#" alt="alternate link" width="150" height="150"&gt;
+        &lt;img src="#" alt="alternate text" width="150" height="150"&gt;
       </pre>
       <h3>Let's combine everything we learned into one example!</h3>
       <p>Our HTML source code should look like this:</p>
@@ -152,6 +156,56 @@
       <p>&lt;figure&gt; is for wrapping your image content around it, and &lt;figcaption&gt; is to caption your image.</p>
       <p>A &lt;footer&gt; is generally found at the bottom of a document, a section, or an article. Just like the &lt;header&gt; the content is generally metainformation, such as author details, legal information, and/or links to related information.</p>
       <p>The &lt;section&gt; element defines a section in a document. A section is a thematic grouping of content, typically with a heading, such as Chapters, Introduction, News items, Contact information.</p>
-      <p>The &lt;article&gt; element specifies independent, self-contained content. It can be used for Forum posts, Blog posts, User comments, Product cards, Newspaper articles.</p>
+      <p>The &lt;article&gt; element specifies independent, self-contained content. It can be used for forum posts, blogs, user comments, product cards, newspaper articles.</p>
+      <h2>HTML Forms</h2>
+      <p>&lt;form&gt; is an HTML element to collect input data containing interactive controls. &lt;form&gt; is a container that contains input elements like text, email, number, radio buttons, checkboxes, submit buttons. </p>
+      <pre>
+        &lt;form&gt;
+
+           form elements...
+
+        &lt;/form&gt;
+      </pre>
+      <p>The &lt;form&gt; element can contain one or more elements, such as &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;, &lt;select&gt;, &lt;option&gt;.</p>
+      <div class="form-container">
+        <h3>An HTML Form</h3>
+        <form>
+          <label for="fname">Name:</label>
+          <input type="text" id="fname" name="fname" value="Tom"><br><br>
+          <label for="species">Select your species:</label>
+            <select name="species" id="species">
+              <option value="cat">Cat</option>
+              <option value="dog">Dog</option>
+            </select><br>
+            <p>Have you eaten today?</p>
+            <input type="radio" id="yes" name="yes" value="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="no" value="no">
+            <label for="no">No</label><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <h2>Let's break down the example above</h2>
+      <pre>
+        &lt;form&gt;
+          &lt;label for="fname">Name:&lt;/label&gt;
+          &lt;input type="text" id="fname" name="fname" value="Tom"&gt;
+          &lt;label for="species"&gt;Select your species:&lt;/label&gt;
+            &lt;select name="species" id="species"&gt;
+              &lt;option value="cat"&gt;Cat&lt;/option&gt;
+              &lt;option value="dog"&gt;Dog&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;p&gt;Have you eaten today?&lt;/p&gt;
+            &lt;input type="radio" id="yes" name="yes" value="yes"&gt;
+            &lt;label for="yes"&gt;Yes&lt;/label&gt;
+            &lt;input type="radio" id="no" name="no" value="no"&gt;
+            &lt;label for="no"&gt;No&lt;/label&gt;
+          &lt;input type="submit" value="Submit"&gt;
+       &lt;/form&gt;
+      </pre>
+      <p>The &ltlabel&gt; tag is useful for screen-readers and helps users who have difficulty clicking on small regions like buttons and checkboxes. The for attribute of the &lt;label&gt; tag shouyld be equal to the id attribute of the &lt;input&gt; element to bind the two together.</p>
+      <p>The &lt;input type="text"&gt; defines a single-line input field for text input. We added the value attribute so it would display "Tom".</p>
+      <p>The &lt;input type="submit"&gt; defines a button for submitting the form data to a form-handler.</p>
+      <p>Each input field must have a name attribute to be submitted. If it is omitted, the value of the input field will not be sent at all.</p>
     </body>
 </html>
