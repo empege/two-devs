@@ -49,7 +49,7 @@
           &lt;h5&gt;This is heading 5&lt;/h5&gt;
           &lt;h6&gt;This is heading 6&lt;/h6&gt;
         </pre>
-        <p><important>Note:</important> Only use one &lt;h1&gt; per page. In addition to making our website more user-friendly, html headings can also help to improve our <abbr title="Search Engine Optimization">SEO.</abbr> Search Engine Optimization is the process of improving our website to increase its visibility in Google and other search engines whenever users search for products, information, services etc.</p>
+        <p><strong>Note:</strong> Only use one &lt;h1&gt; per page. In addition to making our website more user-friendly, html headings can also help to improve our <abbr title="Search Engine Optimization">SEO.</abbr> Search Engine Optimization is the process of improving our website to increase its visibility in Google and other search engines whenever users search for products, information, services etc.</p>
         <p>The most common example of on-page SEO is optimizing a piece of content to a specific keyword. For example, We're making a HTML tutorial website, our keyword might be “html tutorial.” We'd include that keyword in our page's title, slug, meta description, headers, and body.</p>
       </div>
       <h2>HTML Paragraphs</h2>
@@ -67,7 +67,7 @@
       <p>HTML images are defined with the &lt;img&gt; tag. It is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web pages. The &lt;img&gt; tag creates a holding space for the referenced image. The &lt;img&gt; tag has two required attributes:</p>
       <p>src - specifies the path to the image</p>
       <p>alt - specifies an alternate text for the image, if the image for some reason cannot be displayed</p>
-      <p><important>Note:</important> Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.</p>
+      <p><strong>Note:</strong> Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.</p>
       <pre>
         &lt;img src="#" alt="alternate text" width="150" height="150"&gt;
       </pre>
@@ -178,9 +178,9 @@
               <option value="dog">Dog</option>
             </select><br>
             <p>Have you eaten today?</p>
-            <input type="radio" id="yes" name="yes" value="yes">
+            <input type="radio" id="yes" name="answer" value="yes">
             <label for="yes">Yes</label>
-            <input type="radio" id="no" name="no" value="no">
+            <input type="radio" id="no" name="answer" value="no">
             <label for="no">No</label><br><br>
           <input type="submit" value="Submit">
         </form>
@@ -196,16 +196,31 @@
               &lt;option value="dog"&gt;Dog&lt;/option&gt;
             &lt;/select&gt;
             &lt;p&gt;Have you eaten today?&lt;/p&gt;
-            &lt;input type="radio" id="yes" name="yes" value="yes"&gt;
+            &lt;input type="radio" id="yes" name="answer" value="yes"&gt;
             &lt;label for="yes"&gt;Yes&lt;/label&gt;
-            &lt;input type="radio" id="no" name="no" value="no"&gt;
+            &lt;input type="radio" id="no" name="answer" value="no"&gt;
             &lt;label for="no"&gt;No&lt;/label&gt;
           &lt;input type="submit" value="Submit"&gt;
        &lt;/form&gt;
       </pre>
       <p>The &ltlabel&gt; tag is useful for screen-readers and helps users who have difficulty clicking on small regions like buttons and checkboxes. The for attribute of the &lt;label&gt; tag shouyld be equal to the id attribute of the &lt;input&gt; element to bind the two together.</p>
       <p>The &lt;input type="text"&gt; defines a single-line input field for text input. We added the value attribute so it would display "Tom".</p>
+      <p>The &lt;select&gt; tag is used to create a drop-down list. The id attribute is needed to associate the drop-down list with a label. The &lt;option&gt; tags inside the &lt;select&gt; element define the available options in the drop-down list. If we have a long list of options, we can group related options within the &lt;optgroup&gt; tag!</p>
+      <p>The &lt;input type="radio"&gt; defines a radio button. Radio buttons let us select only one of a limited number of choices. For one or more options of a limited number of choices, we will use &lt;input type="checkbox"&gt; instead of radio.</p>
       <p>The &lt;input type="submit"&gt; defines a button for submitting the form data to a form-handler.</p>
       <p>Each input field must have a name attribute to be submitted. If it is omitted, the value of the input field will not be sent at all.</p>
+      <p>If we want a field with a multi-line text input control, we will add the &lt;textarea&gt; tag. It is useful for inputs like comments and reviews. It can hold an unlimited number of characters. The size of a text area is specified by the cols and rows attributes (or with CSS).</p>
+      <p>The &lt;button&gt; element defines a clickable button. We must always specify the type attribute for the button element!</p>
+      <p><strong>Note:</strong> We should always add the &lt;label&gt; tag for best accessibity practices.</p>
+      <h3>HTML Input Attributes</h3>
+      <p>The value attribute specifies an initial value for an input field. </p>
+      <p>The readonly attribute specifies that an input field is read-only. It can't be modified.</p>
+      <p>The disabled attribute specifies that an input field should be disabled. It is unusable and un-clickable. This value will not be sent when submitting the form.</p>
+      <p>The size attribute specifies the visible width, in characters, of an input field. The default value is 20. This attribute works with input types: text, search, url, email and password.</p>
+      <p>The min and max attributes specify the minimum and maximum values for an input field. They work with: number, range, date, month, time and week. maxlength attribute specifies the maximum number of characters allowed in an input field.</p>
+      <p>The multiple attribute specifies that the user is allowed to enter more than one value in an input field. It works with email and file.</p>
+      <p>The placeholder attribute specifies a short hint that describes the expected value of an input field. It is displayed in the input field before we enter a value. It works with text, search, url, email, password.</p>
+      <p>The required attribute specifies that an input field must be filled out before submitting the form.</p>
+      <p>The autofocus attribute specifies that an input field should automatically get focus when the page loads.</p>
     </body>
 </html>
