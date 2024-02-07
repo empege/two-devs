@@ -3,6 +3,7 @@
     <head>
         <title>HTML Tutorial</title>
         <link rel="stylesheet" href="tutorial.css">
+        <script src="tutorial.js" defer></script>
     </head>
     <body>
       <header>
@@ -284,26 +285,6 @@
       <p>The autofocus attribute specifies that an input field should automatically get focus when the page loads.</p>
       </section>
       <button onclick="topFunction()" id="upButton" title="Go to top">Top</button>
-      <script>
-      let mybutton = document.getElementById("upButton");
-
-
-      window.onscroll = function() {scrollFunction()};
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-
-      function topFunction() {
-        document.body.scrollTop = 0; 
-        document.documentElement.scrollTop = 0;
-      }
-      </script>
       <footer>
         <p>The authors of this tutorial are Ivan and Aleksandar.</p>
       </footer>
