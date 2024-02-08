@@ -10,27 +10,17 @@
         <h1>Let's learn HTML together!</h1>
         <p><q>Never feel guilty for starting again.</q> - Rupi Kaur.</p>
       </header>
-  <!--<nav>
-        <a href="#">HTML</a>
-        <a href="#">CSS</a>
-        <a href="#">JavaScript</a>
-        <a href="#" style="float:right">About Us</a>
-      </nav> 
-    -->
-       <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">HTML</button>
-          <div class="dropdown-content">
-          <a href="#1">What is HTML?</a>
-          <a href="#2">HTML Documents</a>
-          <a href="#3">Semantic Elements in HTML</a>
-          <a href="#4">HTML Forms</a>
-          </div>
-        </div>
-      </div>
+      <nav>
+        <ul>
+          <li><a href="#section-2">HTML Documents</a></li>
+          <li><a href="#section-3">Semantic Elements in HTML</a></li>
+          <li><a href="#section-4">HTML Forms</a></li>
+          <li><a href="#section-5">Authours</a></li>
+        </ul>
+      </nav>
       <main>
         <section>
-          <h2 id="1">What is HTML?</h2> 
+          <h2 id="section-1">What is HTML?</h2> 
           <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language for documents designed to be displayed in a web browser. A markup language is a text-encoding system which specifies the structure and formatting of a document. In layman's terms, it acts like the skeleton of a web page by telling the browser how to display the content. HTML markup consists of several components called tags. They commonly come in pairs as shown in the example below:</p>
           <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png" width="400px">
           <p>This is called an HTML Element. It consists of the opening(or start) tag, content and the closing(end tag) tag. Elements can also have attributes:</p>
@@ -42,7 +32,7 @@
         <p>A simple text editor is all that we need to start learning HTML. </p>
       </section>
       <section>
-        <h2 id="2">HTML Documents</h2>
+        <h2 id="section-2">HTML Documents</h2>
         <p>All HTML documents must start with a document type declaration: &lt;!DOCTYPE html&gt;. It represents the document type and helps browsers display web pages correctly. It MUST only appear once at the top of the page before any HTML tags. It is not case sensitive, which means you can write it in lowercase.</p>
       </section>
       <section>
@@ -148,7 +138,7 @@
       <p>The initial-scale=1.0 sets the initial zoom level when the page is first loaded by our browser.</p>
       </section>
       <section>
-      <h2 id="3">Semantic Elements in HTML</h2>
+      <h2 id="section-3">Semantic Elements in HTML</h2>
       <p>The semantic code (SEM) points to any element in a text that suggests a particular, often additional meaning by way of connotation. Many websites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header"&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer. However, &lt;div&gt; and &lt;span&gt; elements are non-semantic. By themselves, they tell nothing about their content.</p>
       <p>Here are some semantic elements that we can use to define different parts of a web page:</p>
           <ul>
@@ -213,7 +203,7 @@
       <p>The &lt;article&gt; element specifies independent, self-contained content. It can be used for forum posts, blogs, user comments, product cards, newspaper articles.</p>
       </section>
       <section>
-      <h2 id="4">HTML Forms</h2>
+      <h2 id="section-4">HTML Forms</h2>
       <p>&lt;form&gt; is an HTML element to collect input data containing interactive controls. &lt;form&gt; is a container that contains input elements like text, email, number, radio buttons, checkboxes, submit buttons. </p>
       <div class="example">
         <p>&lt;form&gt;<br>
@@ -285,8 +275,8 @@
       <p>The autofocus attribute specifies that an input field should automatically get focus when the page loads.</p>
       </section>
       <button onclick="topFunction()" id="upButton" title="Go to top">Top</button>
-      <footer>
-        <p>The authors of this tutorial are Ivan and Aleksandar.</p>
+      <footer id="section-5">
+        <p>The authours of this tutorial are Ivan and Aleksandar.</p>
       </footer>
     </main>
     </body>
