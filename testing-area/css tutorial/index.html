@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Now let's learn CSS!</h1>
+    </header>
+    <nav>
+      <ul>
+        <li></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>What is CSS?</h2>
+        <p><abbr title="Cascading Style Sheets">CSS</abbr> is the language we use to style a Web page! It describes how HTML elements are to be displayed on screen and can control the layout of multiple web pages all at once.</p>
+        <h2>Why use CSS?</h2>
+        <p>We use CSS to define styles for our web pages, including the design, layout and variations in display for different devices and screen sizes. CSS removed the style formatting from the HTML page. The style definitions are normally saved in external .css files. With an external stylesheet file, we can change the look of an entire website by changing just one file!</p>
+      </section>
+      <section>
+        <h2>CSS Syntax</h2>
+        <p>CSS consists of a selector and a declaration block.</p>
+        <img src="https://www.w3schools.com/css/img_selector.gif" height="100" width="500">
+        <p>The selector points to the HTML element we want to style.</p>
+        <p>The declaration block contains one or more declarations separated by semicolons. Each declaration includes a CSS property name and a value, separated by a colon. Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces:</p>
+        <div class="example">
+          <p>
+            p {<br>
+              color: red;<br>
+              text-align: center;
+            }
+          </p>
+        </div>
+        <h2>Let's explain the example above</h2>
+        <p>p is a selector in CSS (it points to the HTML element we want to style: &lt;p&gt;)</p>
+        <p>color is a property, and red is the property value</p>
+        <p>text-align is a property, and center is the property value</p>
+      </section>
+      <section>
+        <h2>CSS Selectors</h2>
+        <p>CSS selectors are used to "find" (or select) the HTML elements we want to style.</p>
+        <p>CSS can be divided into five categories:</p>
+        <ul>
+          <li>Simple selectors (select elements based on name, id, class)</li>
+          <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+          <li>Pseudo-class selectors (select elements based on a certain state)</li>
+          <li>Pseudo-elements selectors (select and style a part of an element)</li>
+          <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+        </ul>
+        <h2>The CSS element Selector</h2>
+        <p>The element selector selects HTML elements based on the element name.</p>
+        <div class="example">
+          <p>
+            p {<br>
+              text-align: center;<br>
+              color: red;
+            }
+          </p>
+        </div>
+        <aside>
+          <p>All paragraphs on the page will be center-aligned and will be red.</p>
+        </aside>
+        <h2>The CSS id Selector</h2>
+        <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+        <p>The id of an element is unique within a page, so the id selector is used to select one unique element.</p>
+        <p>To select an element with a specific id, write a hashtag (#), followed by the id of the element.</p>
+        <div class="example">
+          <p>
+            #para1 {<br>
+              text-align: center;<br>
+              color: red;
+            }
+          </p>
+        </div>
+        <aside>
+          <p>The CSS rule will only apply to the paragraph with the id="para1".</p>
+        </aside>
+        <p><strong>Note:</strong> An id name cannot start with a number.</p>
+        <h2>The CSS class Selector</h2>
+        <p>The class selector selects HTML elements with a specific class attribute.</p>
+        <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+        <div class="example">
+          <p>
+            .center {<br>
+              text-align: center;<br>
+              color: red;
+            }
+          </p>
+        </div>
+        <aside>
+          <p>All elements with class="center" will be red and center-aligned</p>
+        </aside>
+        <p>We can also specify that only specific elements should be affected by a class.</p>
+        <div class="example">
+          <p>
+            p.center {<br>
+              text-align: center;<br>
+              color: red;
+            }
+          </p>
+        </div>
+        <aside>
+          <p>Only &lt;p&gt; elements with class="center" will be red and center-aligned</p>
+        </aside>
+        <p><strong>Note:</strong> Like with id, a class name cannot start with a number.</p>
+        <h2>The CSS Universal Selector</h2>
+        <p>The universal selector (*) selects all HTML elements on the page.</p>
+        <div class="example">
+          <p>
+            * {<br>
+              text-align: center;<br>
+              color: blue;<br>
+            }
+          </p>
+        </div>
+        <aside>This CSS rule below will affect every HTML element on the page.</aside>
+        <h2>The CSS Grouping Selector</h2>
+        <p>The grouping selector selects all the HTML elements with the same style definitions.</p>
+        <div class="example">
+          <p>
+            h1 {<br>
+              text-align: center;<br>
+              color: red;<br>
+            }<br><br>
+            
+            h2 {<br>
+              text-align: center;<br>
+              color: red;<br>
+            }<br><br>
+            
+            p {<br>
+              text-align: center;<br>
+              color: red;<br>
+            }
+          </p>
+        </div>
+        <aside>
+          <p>Because the h1, h2, and p elements have the same style definitions, we can minimize the code by grouping the selectors. This is done by separating each selector with a comma.</p>
+        </aside>
+        <div class="example">
+          <p>
+            h1, h2, p {<br>
+              text-align: center;<br>
+              color: red;<br>
+            }
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>How Do We Add CSS?</h2>
+        <p>There are three ways to insert CSS:</p>
+        <uL>
+          <li>External CSS</li>
+          <li>Internal CSS</li>
+          <li>Inline CSS</li>
+        </uL>
+        <h3>External CSS</h3>
+        <p>Our HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element, inside the &lt;head&gt; section. </p>
+        <div class="example">
+          <p>
+            &lt;head&gt;<br>
+              &lt;link rel="stylesheet" href="mystyle.css"&gt;<br>
+            &lt;/head&gt;
+          </p>
+        </div>
+        <aside>
+          <p>An external style sheet can be written in any text editor, and must be saved with a .css extension. The external .css file should not contain any HTML tags.</p>
+        </aside>
+        <h3>Let's take a look at the "mystyle.css" file</h3>
+        <div class="example">
+          <p>
+            body {<br>
+              background-color: lightblue;<br>
+            }<br><br>
+            
+            h1 {<br>
+              color: navy;<br>
+              margin-left: 20px;<br>
+            }<br><br>
+
+            p {<br>
+              padding: 15px;<br>
+              font-style: oblique;<br>
+            }
+          </p>
+        </div>
+        <h3>Internal CSS</h3>
+        <p>An internal style sheet may be used if one single HTML page has a unique style. The internal style is defined inside the &lt;style&gt; element, inside the &lt;head&gt; section.</p>
+        <div class="example">
+          <p>
+            &lt;head&gt;<br>
+              &lt;style&gt;<br>
+              body {<br>
+                background-color: linen;<br>
+              }<br><br>
+              
+              h1 {<br>
+                color: maroon;<br>
+                margin-left: 40px;<br>
+              }<br>
+              &lt;/style&gt;<br>
+              &lt;/head&gt;
+          </p>
+        </div>
+        <h3>Inline CSS</h3>
+        <p>An inline style may be used to apply a unique style for a single element. To use inline styles, we add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+        <div class="example">
+          <p>
+            &lt;h1 style="color:blue;text-align:center;"&gt;This is a heading&lt;/h1&gt;<br>
+            &lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
+          </p>
+        </div>
+        <h3>Multiple Style Sheets</h3>
+        <p>If the internal style is defined after the link to the external style sheet, it will override the external style sheet.</p>
+        <div class="example">
+          <p>
+            &lt;head&gt;<br>
+              &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;<br>
+              &lt;style&gt;<br><br>
+              h1 {<br>
+                color: orange;<br>
+              }<br><br>
+              &lt;/style&gt;<br>
+              &lt;/head&gt;
+          </p>
+        </div>
+        <aside>
+          <p>In this case, the colour of the &lt;h1&gt; element will be orange.</p>
+        </aside>
+        <p>However, if the internal style is defined before the link to the external style sheet, the &lt;h1&gt; elements will be navy:</p>
+        <div class="example">
+          <p>
+            &lt;head&gt;<br>
+              &lt;style&gt;<br><br>
+              h1 {<br>
+                color: orange;<br>
+              }<br><br>
+              &lt;/style&gt;<br>
+              &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;<br>
+              &lt;/head&gt;
+          </p>
+        </div>
+        <h3>Cascading Order</h3>
+        <p>When there is more than one style specified for an HTML element, what style will be used?</p>
+        <p>The priority list looks like this:</p>
+        <ol>
+          <li>Inline style (inside an HTML element)</li>
+          <li>External and internal style sheets (in the head section)</li>
+          <li>Browser default</li>
+        </ol>
+        <aside>
+          <p>Thus, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+        </aside>
+      </section>
+      <section>
+        <h2>CSS Comments</h2>
+        <p>Like with HTML comments, CSS comments are not displayed in the browser, but they can help to explain our source code. A CSS comment is placed inside the &lt;style&gt; element, and starts with /* and ends with */:</p>
+        <div class="example">
+          <p>
+            /* This is a single-line comment */<br><br>
+            p {<br>
+              color: red; /* Set text color to red */<br>
+            }<br><br>
+            /* This is<br>
+            a multi-line<br>
+            comment */
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>CSS Colours</h2>
+        <h3>CSS Colour Names</h3>
+        <p>In CSS, a color can be specified by using a predefined color name: Tomato, Orange, DodgerBlue, MediumSeaGreen, Grey, SlateBlue etc.</p>
+        <div class="example">
+          <!-- Represent elements with colour -->
+        </div>
+        <aside>
+          <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
+        </aside>
+        <h3>CSS Background Color</h3>
+        <p>We can set the background colour for HTML elements:</p>
+        <div class="example">
+          <p>
+            <!-- Visual example of below code -->
+            &lt;h1 style="background-color:DodgerBlue;"&gt;Hello World&lt;/h1&gt;<br>
+            &lt;p style="background-color:Tomato;"&gt;Lorem ipsum...&lt;/p&gt;
+          </p>
+        </div>
+        <h3>CSS Text Colour</h3>
+        <p>We can set the colour of text:</p>
+        <div class="example">
+          <p>
+            <!-- Visual example of below code -->
+            &lt;h1 style="color:Tomato;"&gt;Hello World&lt;/h1&gt;<br>
+            &lt;p style="color:DodgerBlue;"&gt;Lorem ipsum...&lt;/p&gt;<br>
+            &lt;p style="color:MediumSeaGreen;"&gt;Ut wisi enim...&lt;/p&gt;
+          </p>
+        </div>
+        <h3>CSS Border Colour</h3>
+        <p>We can set the colour of borders:</p>
+        <div class="example">
+          <p>
+            <!-- Visual example of below code -->
+            &lt;h1 style="border:2px solid Tomato;"&gt;Hello World&lt;/h1&gt;<br>
+            &lt;h1 style="border:2px solid DodgerBlue;"&gt;Hello World&lt;/h1&gt;<br>
+            &lt;h1 style="border:2px solid Violet;"&gt;Hello World&lt;/h1&gt;
+          </p>
+        </div>
+        <h3>CSS Colour Values</h3>
+        <p>In CSS, colours can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.</p>
+        <!-- Colour representation -->
+        <p>Tomato can be accessed by colour name "Tomato", or rgb(255, 99, 71), #ff6347, hsl(9, 100%, 64%).</p>
+      </section>
+      <section>
+        <h2>CSS Backgrounds</h2>
+        <p>The CSS background properties are used to add background effects for elements. The properties are:</p>
+        <ul>
+          <li>background-color</li>
+          <li>background-image</li>
+          <li>background-repeat</li>
+          <li>background-attachment</li>
+          <li>background-position</li>
+        </ul>
+        <aside>
+          <p>To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.</p>
+        </aside>
+        <div class="example">
+          <p>Instead of writing:</p>
+          <p>body {<br>
+            background-color: #ffffff;<br>
+            background-image: url("img.png");<br>
+            background-repeat: no-repeat;<br>
+            background-position: right top;<br>
+            }</p>
+          <p>We can use the shorthand property background:</p>
+          <p>
+            body {<br>
+              background: #ffffff url("img.png") no-repeat right top;<br>
+            }
+          </p>
+        </div>
+        <h3>CSS background-color</h3>
+        <p>The background-color property specifies the background color of an element.</p>
+        <div class="example">
+          <p>
+            body {<br>
+              background-color: lightblue;<br>
+            }
+          </p>
+        </div>
+        <h3>CSS background-image</h3>
+        <p>The background-image property specifies an image to use as the background of an element. By default, the image is repeated so it covers the entire element.</p>
+        <div class="example">
+          <p>
+            body {<br>
+              background-image: url("#");<br>
+            }
+          </p>
+        </div>
+        <p><strong>Note:</strong> When using a background image, use an image that does not disturb the text.</p>
+        <h3>CSS background-repeat</h3>
+        <p>The background-image property, by default, repeats an image both horizontally and vertically.</p>
+        <div class="example">
+          <p>
+            body {<br>
+              background-image: url("img.png");<br>
+              background-repeat: repeat-x;<br>
+            }
+          </p>
+        </div>
+        <aside>
+          <p>The image above is repeated only horizontally (background-repeat: repeat-x)</p>
+        </aside>
+        <h3>CSS background-repeat: no-repeat</h3>
+        <p>Showing the background image only once is also specified by the background-repeat property:</p>
+        <div class="example">
+          <p>
+            body {<br>
+              background-image: url("img.png");<br>
+              background-repeat: no-repeat;<br>
+            }
+          </p>
+        </div>
+        <h3>CSS background-position</h3>
+        <p>The background-position property is used to specify the position of the background image.</p>
+        <div class="example">
+          <p>
+            body {<br>
+              background-image: url("img.png");<br>
+              background-repeat: no-repeat;<br>
+              background-position: right top;<br>
+            }
+          </p>
+        </div>
+        <h3>CSS background-attachment</h3>
+        <p>The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page):</p>
+        <div class="example">
+          <p>
+            body {<br>
+              background-image: url("img.png");<br>
+              background-repeat: no-repeat;<br>
+              background-position: right top;<br>
+              background-attachment: fixed;<br>
+            }
+          </p>
+        </div>
+        <aside>
+          <p>To specify that the background image should scroll with the rest of the page, use background-attachment: scroll;</p>
+        </aside>
+      </section>
+      <section>
+        <h2>CSS Borders</h2>
+        <p>The CSS border properties allow us to specify the style, width, and colour of an element's border. Like with background, we can use the border shorthand to shorten the code.</p>
+        <div class="example">
+          <p>
+            p {<br>
+              border: 5px solid red;<br>
+            }
+          </p>
+        </div>
+        <!-- Visual example of styled borders -->
+        <h3>CSS Border Style</h3>
+        <p>The border-style property specifies what kind of border to display. These can be: dotted, dashed, solid, double, inset, outset, none or hidden.</p>
+        <h3>CSS Border Width</h3>
+        <p>The border-width property specifies the width of the four borders. The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.</p>
+        <!-- Example of border-width -->
+        <h3>CSS Border Color</h3>
+        <p>The border-color property is used to set the color of the four borders. It can be set by: name, HEX, RGB, HSL or transparent.</p>
+        <!-- Example of border-colour-->
+        <h3>CSS Rounded Borders</h3>
+        <p>The border-radius property is used to add rounded borders to an element:</p>
+        <!-- Example of border-radius-->
+      </section>
+      <section>
+        <h2>CSS Margins</h2>
+      </section>
+    </main>
+  </body>
+</html>
