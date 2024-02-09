@@ -12,34 +12,39 @@
       </header>
       <nav>
         <ul>
-          <li><a href="#section-2">HTML Documents</a></li>
-          <li><a href="#section-3">Semantic Elements in HTML</a></li>
-          <li><a href="#section-4">HTML Forms</a></li>
-          <li><a href="#section-5">Authours</a></li>
+          <li><a href="#section-1">HTML Documents</a></li>
+          <li><a href="#section-2">Semantic Elements in HTML</a></li>
+          <li><a href="#section-3">HTML Forms</a></li>
+          <li><a href="#section-4">Authours</a></li>
         </ul>
       </nav>
       <main>
-        <section>
-          <h2 id="section-1">What is HTML?</h2> 
+      <section>
+          <h2>What is HTML?</h2> 
           <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language for documents designed to be displayed in a web browser. A markup language is a text-encoding system which specifies the structure and formatting of a document. In layman's terms, it acts like the skeleton of a web page by telling the browser how to display the content. HTML markup consists of several components called tags. They commonly come in pairs as shown in the example below:</p>
           <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png" width="400px">
-          <p>This is called an HTML Element. It consists of the opening(or start) tag, content and the closing(end tag) tag. Elements can also have attributes:</p>
+          <p>This is called an HTML element. It consists of the opening(or start) tag, content and the closing(end tag) tag. Elements can also have attributes:</p>
           <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-attribute-small.png" width="400px">
-          <!-- Dodaj primere za atribute -->
           <p>Attributes contain extra information about the element, it won't appear in the actual content. They always have a space between it and the element name, followed by an equal sign and the value is wrapped by opening and closing quotation marks.</p>
-        </section>
+          <p>The href attribute specifies the URL of the page the link goes to: &lt;a href="url">&lt;/a&gt;</p>
+          <p>The src attribute specifies the path to the image to be displayed, the &lt;img&gt; tag should also contain the width and height attributes: &lt;img src="url" width="300" height="200"&gt;</p>
+          <p>The alt attribute for the &lt;img&gt; tag specifies an alternate text for an image, if the image for some reason cannot be displayed: &lt;img src="url" alt="image description"&gt;</p>
+          <p>The style attribute is used to add styles to an element, such as color, font, size, and more: &lt;p style="color:red;"&gt;This paragraph is red.&lt;/p&gt;</p>
+          <p>The title attribute defines some extra information about an element: &lt;p title="extra information"&gt;This is a paragraph.&lt;/p&gt;</p>
+          <p><strong>Note:</strong> The HTML standard does not require lowercase attribute names and quotes around attribute values. <abbr title="The World Wide Web Consortium">W3C</abbr> recommends lowercase attributes and quotes in HTML.</p>
+      </section>
       <section>
         <h2>How to write HTML?</h2>
         <p>A simple text editor is all that we need to start learning HTML. </p>
       </section>
       <section>
-        <h2 id="section-2">HTML Documents</h2>
+        <h2 id="section-1">HTML Documents</h2>
         <p>All HTML documents must start with a document type declaration: &lt;!DOCTYPE html&gt;. It represents the document type and helps browsers display web pages correctly. It MUST only appear once at the top of the page before any HTML tags. It is not case sensitive, which means you can write it in lowercase.</p>
       </section>
       <section>
           <h2>An example of a HTML5 document</h2>
           <div class="example">
-            <p>
+            <p style="text-align: left;">
               &lt;!DOCTYPE html&gt;<br>
               &lt;html&gt;<br>
               &lt;head&gt;<br>
@@ -54,8 +59,8 @@
               &lt;/html&gt;
             </p>
           </div>
-        </section>
-        <section>
+      </section>
+      <section>
         <h2>HTML Headings</h2>
         <p>HTML Headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags. &lt;h1&gt; defines the most important heading, the &lth6&gt; the least important. </p>
         <div class="example">
@@ -70,78 +75,141 @@
         </div>
         <p><strong>Note:</strong> Only use one &lt;h1&gt; per page. In addition to making our website more user-friendly, html headings can also help to improve our <abbr title="Search Engine Optimization">SEO.</abbr> Search Engine Optimization is the process of improving our website to increase its visibility in Google and other search engines whenever users search for products, information, services etc.</p>
         <p>The most common example of on-page SEO is optimizing a piece of content to a specific keyword. For example, We're making a HTML tutorial website, our keyword might be “html tutorial.” We'd include that keyword in our page's title, meta description, headers, and body.</p>
-      </div>
+        </div>
       </section>
       <section>
-      <h2>HTML Paragraphs</h2>
-      <p>HTML paragraphs are defined with the &lt;p&gt; tag. It defines a paragraph of text.</p>
-      <div class="example">
-        <p>
-          &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
-          &lt;p&gt;This is another paragraph.&lt;/p&gt;
-        </p>
-      </div>
+        <h2>HTML Paragraphs</h2>
+        <p>HTML paragraphs are defined with the &lt;p&gt; tag. It defines a paragraph of text.</p>
+        <div class="example">
+          <p>
+            &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+            &lt;p&gt;This is another paragraph.&lt;/p&gt;
+          </p>
+        </div>
       </section>
       <section>
-      <h2>HTML Links</h2>
-      <p>HTML links are defined with the &lt;a&gt; tag. The &lt;a&gt; tag (anchor tag) in HTML is used to create a hyperlink on the webpage. This hyperlink is used to link the webpage to other web pages or some section of the same web page. The link's destination is specified in the href attribute:</p>
-      <div class="example">
-        <p>&lt;a href="#"&gt;This is a link&lt;/a&gt;</p>
-      </div>
-      </section>
-      <section>
-      <h2>HTML Images</h2>
-      <p>HTML images are defined with the &lt;img&gt; tag. It is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web pages. The &lt;img&gt; tag creates a holding space for the referenced image. The &lt;img&gt; tag has two required attributes:</p>
-      <p>src - specifies the path to the image</p>
-      <p>alt - specifies an alternate text for the image, if the image for some reason cannot be displayed</p>
-      <p><strong>Note:</strong> Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.</p>
-      <div class="example">
-        <p>&lt;img src="#" alt="alternate text" width="150" height="150" /&gt;</p>
-      </div>
-      </section>
-      <section>
-      <h2>Let's combine everything we learned into one example!</h2>
-      <p>Our HTML source code should look like this:</p>
-      <div class="example">
-        <p>
-          &lt;!DOCTYPE html&gt;<br>
-          &lt;html&gt;<br>
-          &lt;head&gt;<br>
-            &lt;title&gt;My Webpage&lt;/title&gt;<br>
-          &lt;/head&gt;<br>
-          &lt;body&gt;<br><br>
+        <h2>HTML Comments</h2>
+        <p>HTML comments are not displayed in the browser, but they can help us by describing our HTML source code. We can add HTML comments by writing the syntax: &lt;!-- Our comment --&gt;</p>
+        <p>With comments, we can place notifications and reminders in our HTML code:</p>
+        <div class="example">
+          <p>
+            &lt;!-- This is a comment --&gt;<br><br>
 
-          &lt;h1&gt;Welcome to my Webpage!&lt;h1&gt;<br>
-          &lt;p&gt;Are you a dog or a cat person?&lt;/p&gt;<br>
+            &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>
 
-          &lt;img src="dogs-and/or-cats.jpg" alt="https://www.dogs-and-cats.org" width="300" height="180"&gt;<br>
+            &lt;!-- Remember to add more information here --&gt;
+          </p>
+        </div>
+        <p>We can use comments to hide content. We can hide more than one line, everything between the &lt;!-- and the --&gt; will be hidden from the display:</p>
+        <div class="example">
+          <p>
+          &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>
 
-          &lt;a href="https://wikipedia.org/dogs-and-cats"&gt;Learn more about dogs and cats here!&lt;/a&gt;<br><br>
+          &lt;!-- &lt;p&gt;This is another paragraph &lt;/p&gt; --&gt; This paragraph won't be displayed!<br><br>
 
-          &lt;/body&gt;<br>
-          &lt;/html&gt;
-        </p>
-      </div>
+          &lt;p&gt;This is a paragraph too.&lt;/p&gt;
+          </p>
+        </div>
       </section>
       <section>
-      <h2>HTML Meta tags</h2>
-      <p>The HTML document itself begins with &lt;html&gt; and ends with the &lt;/html&gt; tag. The visible part of the HTML document is between &lt;body&gt; and &lt;/body&gt;. The &lt;head&gt; element is a container for metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag. Metadata is data about the HTML document, such as the document title, character set, styles, scripts, and other meta information. Metadata is not displayed.</p>
-      <h2>Some examples of &lt;meta&gt; tags:</h2>
-      <div class="example">
+        <h2>HTML Links</h2>
+        <p>HTML links are defined with the &lt;a&gt; tag. The &lt;a&gt; tag (anchor tag) in HTML is used to create a hyperlink on the webpage. This hyperlink is used to link the webpage to other web pages or some section of the same web page. The link's destination is specified in the href attribute:</p>
+        <div class="example">
+          <p>&lt;a href="#"&gt;This is a link&lt;/a&gt;</p>
+        </div>
+      </section>
+      <section>
+        <h2>HTML Images</h2>
+        <p>HTML images are defined with the &lt;img&gt; tag. It is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web pages. The &lt;img&gt; tag creates a holding space for the referenced image. The &lt;img&gt; tag has two required attributes:</p>
+        <p>src - specifies the path to the image</p>
+        <p>alt - specifies an alternate text for the image, if the image for some reason cannot be displayed</p>
+        <p><strong>Note:</strong> Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.</p>
+        <div class="example">
+          <p>&lt;img src="#" alt="alternate text" width="150" height="150" /&gt;</p>
+        </div>
+      </section>
+      <section>
+        <h2>Block-level Elements</h2>
+        <p>A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element. It takes up the full width available (stretches out to the left and right as far as it can). The most commonly used block elements are: &lt;p&gt; and &lt;div&gt;. Some other block-level elements:</p>
+        <ul>
+          <li>&lt;main&gt;</li>
+          <li>&lt;article&gt;</li>
+          <li>&lt;section&gt;</li>
+          <li>&lt;nav&gt;</li>
+          <li>&lt;header&gt;</li>
+          <li>&lt;h1&gt;-&lt;h6&gt;</li>
+          <li>&lt;ul&gt;</li>
+          <li>&lt;ol&gt;</li>
+          <li>&lt;aside&gt;</li>
+          <li>&lt;footer&gt;</li>
+        </ul>
+        <div class="example">
+          <p>
+          The &lt;p&gt; element is a block-level element.<br><br>
+
+          The &lt;div&gt; element is a block-level element.
+          </p>
+        </div><br>
+        <h2>Inline Elements</h2>
+        <p>An inline element does not start on a new line, it only takes up as much width as necessary:</p>
+        <div class="example">
+          <p>This is a &lt;span&gt; element inside a paragraph.</p>
+        </div>
+        <p>Inline elements in HTML:</p>
+        <ul>
+          <li>&lt;a&gt;</li>
+          <li>&lt;br&gt;</li>
+          <li>&lt;abbr&gt;</li>
+          <li>&lt;button&gt;</li>
+          <li>&lt;img&gt;</li>
+          <li>&lt;input&gt;</li>
+          <li>&lt;label&gt;</li>
+          <li>&lt;select&gt;</li>
+          <li>&lt;textarea&gt;</li>
+        </ul>
+        <p><strong>Note:</strong> An inline element cannot contain a block-level element!</p>
+      </section>
+      <section>
+        <h2>Let's combine everything we learned into one example!</h2>
+        <p>Our HTML source code should look like this:</p>
+        <div class="example">
+          <p style="text-align: left;">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &lt;head&gt;<br>
+              &lt;title&gt;My Webpage&lt;/title&gt;<br>
+            &lt;/head&gt;<br>
+            &lt;body&gt;<br><br>
+
+            &lt;h1&gt;Welcome to my Webpage!&lt;h1&gt;<br>
+            &lt;p&gt;Are you a dog or a cat person?&lt;/p&gt;<br>
+
+            &lt;img src="dogs-and/or-cats.jpg" alt="https://www.dogs-and-cats.org" width="300" height="180"&gt;<br>
+
+            &lt;a href="https://wikipedia.org/dogs-and-cats"&gt;Learn more about dogs and cats here!&lt;/a&gt;<br><br>
+
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>HTML Meta tags</h2>
+        <p>The HTML document itself begins with &lt;html&gt; and ends with the &lt;/html&gt; tag. The visible part of the HTML document is between &lt;body&gt; and &lt;/body&gt;. The &lt;head&gt; element is a container for metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag. Metadata is data about the HTML document, such as the document title, character set, styles, scripts, and other meta information. Metadata is not displayed.</p>
+        <h2>Some examples of &lt;meta&gt; tags:</h2>
         <p>&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt; defines words for search engines.</p>
         <p>&lt;meta name="description" content="Tutorial for HTML and CSS"&gt; defines a description of our webpage.</p>
         <p>&lt;meta name="author" content="Ivan and Aleksandar"&gt; defines the author(s) of a page.</p>
         <p>&lt;meta http-equiv="refresh" content="30"&gt; refreshes the document every 30 seconds.</p>
         <p>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; sets the viewport to make our website look good on all devices.</p>
-      </div>
-      <p>The viewport is the user's visible area of a webpage. It varies with the device, it is smaller on a smartphone than on a tablet or computer screen. It gives the browser instuctions how to control the page's dimensions and scaling.</p>
-      <p>The width=device-width part makes the width of the page follow the width of our device.</p>
-      <p>The initial-scale=1.0 sets the initial zoom level when the page is first loaded by our browser.</p>
+        <p>The viewport is the user's visible area of a webpage. It varies with the device, it is smaller on a smartphone than on a tablet or computer screen. It gives the browser instuctions how to control the page's dimensions and scaling.</p>
+        <p>The width=device-width part makes the width of the page follow the width of our device.</p>
+        <p>The initial-scale=1.0 sets the initial zoom level when the page is first loaded by our browser.</p>
       </section>
       <section>
-      <h2 id="section-3">Semantic Elements in HTML</h2>
-      <p>The semantic code (SEM) points to any element in a text that suggests a particular, often additional meaning by way of connotation. Many websites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header"&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer. However, &lt;div&gt; and &lt;span&gt; elements are non-semantic. By themselves, they tell nothing about their content.</p>
-      <p>Here are some semantic elements that we can use to define different parts of a web page:</p>
+        <h2 id="section-2">Semantic Elements in HTML</h2>
+        <p>The semantic code (SEM) points to any element in a text that suggests a particular, often additional meaning by way of connotation. Many websites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header"&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer. However, &lt;div&gt; and &lt;span&gt; elements are non-semantic. By themselves, they tell nothing about their content.</p>
+        <p>Here are some semantic elements that we can use to define different parts of a web page:</p>
           <ul>
             <li>&lt;article&gt;</li>
             <li>&lt;aside&gt;</li>
@@ -154,132 +222,131 @@
             <li>&lt;nav&gt;</li>
             <li>&lt;section&gt;</li>
           </ul>
-        </section>
-        <section>
-      <h2>A block of code that uses semantic elements:</h2>
-      <div class="example">
-        <p>
-          &lt;header&gt;&lt;/header&gt;<br>
-          &lt;section&gt;<br>
-          &lt;article&gt;<br>
-          &lt;figure&gt;<br>
-          &lt;img&gt;<br>
-          &lt;figcaption&gt;&lt;/figcaption&gt;<br>
-          &lt;/figure&gt;<br>
-          &lt;/article&gt;<br>
-          &lt;/section&gt;<br>
-          &lt;footer&gt;&lt;/footer&gt;
-        </p>
-      </div>
-      <h2>VS a block of code that uses non-semantic elements:</h2>
-      <div class="example">
-        <p>
-          &lt;div id="header"&gt;&lt;/div&gt;<br>
-          &lt;div class="section"&gt;<br>
-          &lt;div class="article"&gt;<br>
-          &lt;div class="figure"&gt;<br>
-          &lt;img&gt;<br>
-          &lt;div class="figcaption"&gt;&lt;/div&gt;<br>
-          &lt;/div&gt;<br>
-          &lt;/div&gt;<br>
-          &lt;/div&gt;<br>
-          &lt;div id="footer"&gt;&lt;/div&gt;
-        </p>
-      </div>
       </section>
       <section>
-      <h2>What are the big differences?</h2>
-      <p>The first line of code is much easier to read! Imagine we have to read through hundreds or thousands of lines of code? The easier it is to read and understand that code, it makes our job easier!</p>
-      <p>Secondly, it has greater accessibity. Search engines and assistive technologies like screen readers are also able to better understand the context and content of our webiste.</p>
-      <p>Overall, semantic elements also lead to more consistent code.</p>
+        <h2>A block of code that uses semantic elements:</h2>
+        <div class="example">
+          <p>
+            &lt;header&gt;&lt;/header&gt;<br>
+            &lt;section&gt;<br>
+            &lt;article&gt;<br>
+            &lt;figure&gt;<br>
+            &lt;img&gt;<br>
+            &lt;figcaption&gt;&lt;/figcaption&gt;<br>
+            &lt;/figure&gt;<br>
+            &lt;/article&gt;<br>
+            &lt;/section&gt;<br>
+            &lt;footer&gt;&lt;/footer&gt;
+          </p>
+        </div>
+        <h2>VS a block of code that uses non-semantic elements:</h2>
+        <div class="example">
+          <p>
+            &lt;div id="header"&gt;&lt;/div&gt;<br>
+            &lt;div class="section"&gt;<br>
+            &lt;div class="article"&gt;<br>
+            &lt;div class="figure"&gt;<br>
+            &lt;img&gt;<br>
+            &lt;div class="figcaption"&gt;&lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+            &lt;div id="footer"&gt;&lt;/div&gt;
+          </p>
+        </div>
       </section>
       <section>
-      <h2>Let's break down the elements</h2>
-      <p>The &lt;header&gt; element is generally found at the top of a document, a section, or an article and usually contains the main heading and some navigation and search tools.</p>
-      <p>The &lt;nav&gt; element defines a set of navigation links. The &lt;nav&gt; element is intended only for major blocks of navigation links.</p>
-      <p>The &lt;aside&gt; element defines some content aside from the content it is placed in (like a sidebar) and it should be indirectly related to the surrounding content.</p>
-      <p>&lt;figure&gt; is for wrapping your image content around it, and &lt;figcaption&gt; is to caption your image.</p>
-      <p>A &lt;footer&gt; is generally found at the bottom of a document, a section, or an article. Just like the &lt;header&gt; the content is generally metainformation, such as author details, legal information, and/or links to related information.</p>
-      <p>The &lt;section&gt; element defines a section in a document. A section is a thematic grouping of content, typically with a heading, such as Chapters, Introduction, News items, Contact information.</p>
-      <p>The &lt;article&gt; element specifies independent, self-contained content. It can be used for forum posts, blogs, user comments, product cards, newspaper articles.</p>
+        <h2>What are the big differences?</h2>
+        <p>The first line of code is much easier to read! Imagine we have to read through hundreds or thousands of lines of code? The easier it is to read and understand that code, it makes our job easier!</p>
+        <p>Secondly, it has greater accessibity. Search engines and assistive technologies like screen readers are also able to better understand the context and content of our webiste.</p>
+        <p>Overall, semantic elements also lead to more consistent code.</p>
       </section>
       <section>
-      <h2 id="section-4">HTML Forms</h2>
-      <p>&lt;form&gt; is an HTML element to collect input data containing interactive controls. &lt;form&gt; is a container that contains input elements like text, email, number, radio buttons, checkboxes, submit buttons. </p>
-      <div class="example">
-        <p>&lt;form&gt;<br>
-           form elements...<br>
-           &lt;/form&gt;<br>
-        </p>
-      </div>
-      <p>The &lt;form&gt; element can contain one or more elements, such as &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;, &lt;select&gt;, &lt;option&gt;.</p>
-      <div class="form-container">
-        <h3>An HTML Form</h3>
-        <form>
-          <label for="fname">Name:</label>
-          <input type="text" id="fname" name="fname" value="Tom"><br><br>
-          <label for="species">Select your species:</label>
-            <select name="species" id="species">
-              <option value="cat">Cat</option>
-              <option value="dog">Dog</option>
-            </select><br>
-            <p>Have you eaten today?</p>
-            <input type="radio" id="yes" name="answer" value="yes">
-            <label for="yes">Yes</label>
-            <input type="radio" id="no" name="answer" value="no">
-            <label for="no">No</label><br><br>
-          <input type="submit" value="Submit">
-        </form>
-      </div>
+        <h2>Let's break down the elements</h2>
+        <p>The &lt;header&gt; element is generally found at the top of a document, a section, or an article and usually contains the main heading and some navigation and search tools.</p>
+        <p>The &lt;nav&gt; element defines a set of navigation links. The &lt;nav&gt; element is intended only for major blocks of navigation links.</p>
+        <p>The &lt;aside&gt; element defines some content aside from the content it is placed in (like a sidebar) and it should be indirectly related to the surrounding content.</p>
+        <p>&lt;figure&gt; is for wrapping your image content around it, and &lt;figcaption&gt; is to caption your image.</p>
+        <p>A &lt;footer&gt; is generally found at the bottom of a document, a section, or an article. Just like the &lt;header&gt; the content is generally metainformation, such as author details, legal information, and/or links to related information.</p>
+        <p>The &lt;section&gt; element defines a section in a document. A section is a thematic grouping of content, typically with a heading, such as Chapters, Introduction, News items, Contact information.</p>
+        <p>The &lt;article&gt; element specifies independent, self-contained content. It can be used for forum posts, blogs, user comments, product cards, newspaper articles.</p>
       </section>
       <section>
-      <h2>Let's break down the example above</h2>
-      <div class="example">
-        <p>
-        &lt;form&gt;<br>
-        &lt;label for="fname">Name:&lt;/label&gt;<br>        
-        &lt;input type="text" id="fname" name="fname" value="Tom"&gt;<br>
-        &lt;label for="species"&gt;Select your species:&lt;/label&gt;<br>
-        &lt;select name="species" id="species"&gt;<br>
-        &lt;option value="cat"&gt;Cat&lt;/option&gt;<br>
-        &lt;option value="dog"&gt;Dog&lt;/option&gt;<br>
-        &lt;/select&gt;<br>
-        &lt;p&gt;Have you eaten today?&lt;/p&gt;<br>
-        &lt;input type="radio" id="yes" name="answer" value="yes"&gt;<br>
-        &lt;label for="yes"&gt;Yes&lt;/label&gt;<br>
-        &lt;input type="radio" id="no" name="answer" value="no"&gt;<br>
-        &lt;label for="no"&gt;No&lt;/label&gt;<br>
-        &lt;input type="submit" value="Submit"&gt;<br>
-        &lt;/form&gt;
-        </p>
-      </div>
-      <p>The &ltlabel&gt; tag is useful for screen-readers and helps users who have difficulty clicking on small regions like buttons and checkboxes. The for attribute of the &lt;label&gt; tag shouyld be equal to the id attribute of the &lt;input&gt; element to bind the two together.</p>
-      <p>The &lt;input type="text"&gt; defines a single-line input field for text input. We added the value attribute so it would display "Tom".</p>
-      <p>The &lt;select&gt; tag is used to create a drop-down list. The id attribute is needed to associate the drop-down list with a label. The &lt;option&gt; tags inside the &lt;select&gt; element define the available options in the drop-down list. If we have a long list of options, we can group related options within the &lt;optgroup&gt; tag!</p>
-      <p>The &lt;input type="radio"&gt; defines a radio button. Radio buttons let us select only one of a limited number of choices. For one or more options of a limited number of choices, we will use &lt;input type="checkbox"&gt; instead of radio.</p>
-      <p>The &lt;input type="submit"&gt; defines a button for submitting the form data to a form-handler.</p>
-      <p>Each input field must have a name attribute to be submitted. If it is omitted, the value of the input field will not be sent at all.</p>
-      <p>If we want a field with a multi-line text input control, we will add the &lt;textarea&gt; tag. It is useful for inputs like comments and reviews. It can hold an unlimited number of characters. The size of a text area is specified by the cols and rows attributes (or with CSS).</p>
-      <p>The &lt;button&gt; element defines a clickable button. We must always specify the type attribute for the button element!</p>
-      <p><strong>Note:</strong> We should always add the &lt;label&gt; tag for best accessibity practices.</p>
+        <h2 id="section-3">HTML Forms</h2>
+        <p>&lt;form&gt; is an HTML element to collect input data containing interactive controls. &lt;form&gt; is a container that contains input elements like text, email, number, radio buttons, checkboxes, submit buttons. </p>
+        <div class="example">
+          <p>&lt;form&gt;<br>
+            form elements...<br>
+            &lt;/form&gt;<br>
+          </p>
+        </div>
+        <p>The &lt;form&gt; element can contain one or more elements, such as &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;, &lt;select&gt;, &lt;option&gt;.</p>
+        <div class="form-container">
+          <h3>An HTML Form</h3>
+          <form>
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="fname" value="Tom"><br><br>
+            <label for="species">Select your species:</label>
+              <select name="species" id="species">
+                <option value="cat">Cat</option>
+                <option value="dog">Dog</option>
+              </select><br>
+              <p>Have you eaten today?</p>
+              <input type="radio" id="yes" name="answer" value="yes">
+              <label for="yes">Yes</label>
+              <input type="radio" id="no" name="answer" value="no">
+              <label for="no">No</label><br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
       </section>
       <section>
-      <h2>HTML Input Attributes</h2>
-      <p>The value attribute specifies an initial value for an input field. </p>
-      <p>The readonly attribute specifies that an input field is read-only. It can't be modified.</p>
-      <p>The disabled attribute specifies that an input field should be disabled. It is unusable and un-clickable. This value will not be sent when submitting the form.</p>
-      <p>The size attribute specifies the visible width, in characters, of an input field. The default value is 20. This attribute works with input types: text, search, url, email and password.</p>
-      <p>The min and max attributes specify the minimum and maximum values for an input field. They work with: number, range, date, month, time and week. maxlength attribute specifies the maximum number of characters allowed in an input field.</p>
-      <p>The multiple attribute specifies that the user is allowed to enter more than one value in an input field. It works with email and file.</p>
-      <p>The placeholder attribute specifies a short hint that describes the expected value of an input field. It is displayed in the input field before we enter a value. It works with text, search, url, email, password.</p>
-      <p>The required attribute specifies that an input field must be filled out before submitting the form.</p>
-      <p>The autofocus attribute specifies that an input field should automatically get focus when the page loads.</p>
+        <h2>Let's break down the example above</h2>
+        <div class="example">
+          <p style="text-align: justify;">
+          &lt;form&gt;<br>
+          &lt;label for="fname">Name:&lt;/label&gt;<br>        
+          &lt;input type="text" id="fname" name="fname" value="Tom"&gt;<br>
+          &lt;label for="species"&gt;Select your species:&lt;/label&gt;<br>
+          &lt;select name="species" id="species"&gt;<br>
+          &lt;option value="cat"&gt;Cat&lt;/option&gt;<br>
+          &lt;option value="dog"&gt;Dog&lt;/option&gt;<br>
+          &lt;/select&gt;<br>
+          &lt;p&gt;Have you eaten today?&lt;/p&gt;<br>
+          &lt;input type="radio" id="yes" name="answer" value="yes"&gt;<br>
+          &lt;label for="yes"&gt;Yes&lt;/label&gt;<br>
+          &lt;input type="radio" id="no" name="answer" value="no"&gt;<br>
+          &lt;label for="no"&gt;No&lt;/label&gt;<br>
+          &lt;input type="submit" value="Submit"&gt;<br>
+          &lt;/form&gt;
+          </p>
+        </div>
+        <p>The &ltlabel&gt; tag is useful for screen-readers and helps users who have difficulty clicking on small regions like buttons and checkboxes. The for attribute of the &lt;label&gt; tag shouyld be equal to the id attribute of the &lt;input&gt; element to bind the two together.</p>
+        <p>The &lt;input type="text"&gt; defines a single-line input field for text input. We added the value attribute so it would display "Tom".</p>
+        <p>The &lt;select&gt; tag is used to create a drop-down list. The id attribute is needed to associate the drop-down list with a label. The &lt;option&gt; tags inside the &lt;select&gt; element define the available options in the drop-down list. If we have a long list of options, we can group related options within the &lt;optgroup&gt; tag!</p>
+        <p>The &lt;input type="radio"&gt; defines a radio button. Radio buttons let us select only one of a limited number of choices. For one or more options of a limited number of choices, we will use &lt;input type="checkbox"&gt; instead of radio.</p>
+        <p>The &lt;input type="submit"&gt; defines a button for submitting the form data to a form-handler.</p>
+        <p>Each input field must have a name attribute to be submitted. If it is omitted, the value of the input field will not be sent at all.</p>
+        <p>If we want a field with a multi-line text input control, we will add the &lt;textarea&gt; tag. It is useful for inputs like comments and reviews. It can hold an unlimited number of characters. The size of a text area is specified by the cols and rows attributes (or with CSS).</p>
+        <p>The &lt;button&gt; element defines a clickable button. We must always specify the type attribute for the button element!</p>
+        <p><strong>Note:</strong> We should always add the &lt;label&gt; tag for best accessibity practices.</p>
+      </section>
+      <section>
+        <h2>HTML Input Attributes</h2>
+        <p>The value attribute specifies an initial value for an input field. </p>
+        <p>The readonly attribute specifies that an input field is read-only. It can't be modified.</p>
+        <p>The disabled attribute specifies that an input field should be disabled. It is unusable and un-clickable. This value will not be sent when submitting the form.</p>
+        <p>The size attribute specifies the visible width, in characters, of an input field. The default value is 20. This attribute works with input types: text, search, url, email and password.</p>
+        <p>The min and max attributes specify the minimum and maximum values for an input field. They work with: number, range, date, month, time and week. maxlength attribute specifies the maximum number of characters allowed in an input field.</p>
+        <p>The multiple attribute specifies that the user is allowed to enter more than one value in an input field. It works with email and file.</p>
+        <p>The placeholder attribute specifies a short hint that describes the expected value of an input field. It is displayed in the input field before we enter a value. It works with text, search, url, email, password.</p>
+        <p>The required attribute specifies that an input field must be filled out before submitting the form.</p>
+        <p>The autofocus attribute specifies that an input field should automatically get focus when the page loads.</p>
       </section> 
-      <!-- Ubaci razliku izmedju block, inline-block i inline elementata i html komentari -->
-      <button onclick="topFunction()" id="upButton" title="Go to top">
-        <img src="../assets/Arrow-top.png" />
-      </button>
-      <footer id="section-5">
+        <button onclick="topFunction()" id="upButton" title="Go to top">
+          <img src="../assets/Arrow-top.png" />
+        </button>
+      <footer id="section-4">
         <p>The authours of this tutorial are Ivan and Aleksandar.</p>
       </footer>
     </main>

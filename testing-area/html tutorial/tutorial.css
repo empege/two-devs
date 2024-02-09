@@ -96,14 +96,21 @@ footer {
   width: 300px;
 }
 
+.form-container > h3 {
+  color: green;
+  text-align: center;
+}
+
 .example {
   padding: 10px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #e4f9de;
   box-shadow: 5px 10px rgb(243, 235, 235);
 }
 
-.form-container > h3 {
-  color: green;
+.example > p {
   text-align: center;
 }
 
