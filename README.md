@@ -24,7 +24,7 @@ We used `webpack` even though there are much better options for smaller projects
 
 For templating we used `handlebars`.
 
-Folder `testing area` is for Aleksandar to create plain HTML, CSS, JS if needed and then bring it over to hbs/sass/js.
+Folder `aleksandar-area` is for Aleksandar to create plain HTML, CSS, JS if needed and then bring it over to main project. Here no compilations are done, so for these files you can just open .html without starting the project and see the progress Aleksandar made before additional changes visible in the main part.
 
 ## Useful link
 
