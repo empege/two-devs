@@ -17,9 +17,9 @@
     <main>
       <section>
         <h2>What is CSS?</h2>
-        <p><abbr title="Cascading Style Sheets">CSS</abbr> is the language we use to style a Web page! It describes how HTML elements are to be displayed on screen and can control the layout of multiple web pages all at once.</p>
+        <p><abbr title="Cascading Style Sheets">CSS</abbr> is the language we use to style a Web page. It describes how HTML elements are to be displayed on screen and can control the layout of multiple web pages all at once.</p>
         <h2>Why use CSS?</h2>
-        <p>We use CSS to define styles for our web pages, including the design, layout and variations in display for different devices and screen sizes. CSS removed the style formatting from the HTML page. The style definitions are normally saved in external .css files. With an external stylesheet file, we can change the look of an entire website by changing just one file!</p>
+        <p>We use CSS to define styles for our web pages, including the design, layout and variations in display for different devices and screen sizes. CSS removed the style formatting from the HTML page. The style definitions are normally saved in external .css files. With an external stylesheet file, we can change the look of an entire website by changing just one file.</p>
       </section>
       <section>
         <h2>CSS Syntax</h2>
@@ -27,18 +27,10 @@
         <img src="https://www.w3schools.com/css/img_selector.gif" height="100" width="500">
         <p>The selector points to the HTML element we want to style.</p>
         <p>The declaration block contains one or more declarations separated by semicolons. Each declaration includes a CSS property name and a value, separated by a colon. Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces:</p>
-        <div class="example">
-          <p>
-            p {<br>
-              color: red;<br>
-              text-align: center;
-            }
-          </p>
-        </div>
         <h2>Let's explain the example above</h2>
-        <p>p is a selector in CSS (it points to the HTML element we want to style: &lt;p&gt;)</p>
-        <p>color is a property, and red is the property value</p>
-        <p>text-align is a property, and center is the property value</p>
+        <p>h1 is a selector in CSS (it points to the HTML element we want to style: &lt;h1&gt;)</p>
+        <p>color is a property, and blue is the property value</p>
+        <p>font-size is a property, and 12 pixels is the property value</p>
       </section>
       <section>
         <h2>CSS Selectors</h2>
@@ -57,12 +49,14 @@
           <p>
             p {<br>
               text-align: center;<br>
-              color: red;
+              color: red;<br>
             }
           </p>
         </div>
         <aside>
-          <p>All paragraphs on the page will be center-aligned and will be red.</p>
+          <div class="hint">What's the outcome?
+            <p class="hidden">All paragraphs on the page will be center-aligned and will be red.</p>
+          </div>
         </aside>
         <h2>The CSS id Selector</h2>
         <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
@@ -70,14 +64,14 @@
         <p>To select an element with a specific id, write a hashtag (#), followed by the id of the element.</p>
         <div class="example">
           <p>
-            #para1 {<br>
+            #p1 {<br>
               text-align: center;<br>
-              color: red;
+              color: red;<br>
             }
           </p>
         </div>
         <aside>
-          <p>The CSS rule will only apply to the paragraph with the id="para1".</p>
+          <p>The CSS rule will only apply to the paragraph with the id="p1".</p>
         </aside>
         <p><strong>Note:</strong> An id name cannot start with a number.</p>
         <h2>The CSS class Selector</h2>
@@ -87,7 +81,7 @@
           <p>
             .center {<br>
               text-align: center;<br>
-              color: red;
+              color: red;<br>
             }
           </p>
         </div>
@@ -99,7 +93,7 @@
           <p>
             p.center {<br>
               text-align: center;<br>
-              color: red;
+              color: red;<br>
             }
           </p>
         </div>
@@ -117,7 +111,7 @@
             }
           </p>
         </div>
-        <aside>This CSS rule below will affect every HTML element on the page.</aside>
+        <aside>This CSS rule will affect every HTML element on the page.</aside>
         <h2>The CSS Grouping Selector</h2>
         <p>The grouping selector selects all the HTML elements with the same style definitions.</p>
         <div class="example">
@@ -170,7 +164,7 @@
         <aside>
           <p>An external style sheet can be written in any text editor, and must be saved with a .css extension. The external .css file should not contain any HTML tags.</p>
         </aside>
-        <h3>Let's take a look at the "mystyle.css" file</h3>
+        <h3>Let's take a look at an external .css file</h3>
         <div class="example">
           <p>
             body {<br>
@@ -263,7 +257,7 @@
           <p>
             /* This is a single-line comment */<br><br>
             p {<br>
-              color: red; /* Set text color to red */<br>
+              color: red; /* Set text colour to red */<br>
             }<br><br>
             /* This is<br>
             a multi-line<br>
@@ -344,7 +338,7 @@
           </p>
         </div>
         <h3>CSS background-color</h3>
-        <p>The background-color property specifies the background color of an element.</p>
+        <p>The background-color property specifies the background colour of an element.</p>
         <div class="example">
           <p>
             body {<br>
@@ -376,7 +370,7 @@
           <p>The image above is repeated only horizontally (background-repeat: repeat-x)</p>
         </aside>
         <h3>CSS background-repeat: no-repeat</h3>
-        <p>Showing the background image only once is also specified by the background-repeat property:</p>
+        <p>Showing the background image only once is also specified by the background-repeat property.</p>
         <div class="example">
           <p>
             body {<br>
@@ -409,7 +403,7 @@
           </p>
         </div>
         <aside>
-          <p>To specify that the background image should scroll with the rest of the page, use background-attachment: scroll;</p>
+          <p>To specify that the background image should scroll with the rest of the page, use background-attachment: scroll.</p>
         </aside>
       </section>
       <section>
@@ -428,15 +422,566 @@
         <h3>CSS Border Width</h3>
         <p>The border-width property specifies the width of the four borders. The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.</p>
         <!-- Example of border-width -->
-        <h3>CSS Border Color</h3>
-        <p>The border-color property is used to set the color of the four borders. It can be set by: name, HEX, RGB, HSL or transparent.</p>
+        <h3>CSS Border Colour</h3>
+        <p>The border-color property is used to set the colour of the four borders. It can be set by: name, HEX, RGB, HSL or transparent.</p>
         <!-- Example of border-colour-->
         <h3>CSS Rounded Borders</h3>
-        <p>The border-radius property is used to add rounded borders to an element:</p>
+        <p>The border-radius property is used to add rounded borders to an element.</p>
         <!-- Example of border-radius-->
       </section>
       <section>
         <h2>CSS Margins</h2>
+        <p>The CSS margin properties are used to create space around elements, outside of any defined borders. With CSS, we have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).</p>
+        <h3>Margin - Individual Sides</h3>
+        <p>CSS has properties for specifying the margin for each side of an element: margin-top, margin-right, margin-bottom and margin-left.</p>
+        <p>The margin properties can have the following values:</p>
+        <ul>
+          <li>auto - the browswer calculates the margin</li>
+          <li>length - specifies a margin in px, pt, cm</li>
+          <li>% - specifies a margin in % of the width of the containing element</li>
+          <li>inherit - specifies that the margin should be inherited from the parent element</li>
+        </ul>
+        <h3>Margin - Shorthand Property</h3>
+        <p>Instead of writing:</p>
+        <div class="example">
+          <p>
+            p {<br>
+              margin-top: 25px;<br>
+              margin-right: 50px;<br>
+              margin-bottom: 75px;<br>
+              margin-left: 100px;<br>
+            }
+          </p>
+        </div>
+        <p>To shorten the code, we can specify all the margin properties in one property.</p>
+        <div class="example">
+          <p>p {<br>
+            margin: 25px 50px 75px 100px;<br>
+          }</p>
+        </div>
+      </section>
+      <section>
+        <h2>CSS Padding</h2>
+        <p>Padding is used to create space around an element's content, inside of any defined borders. With CSS, we have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</p>
+        <h3>Padding - Individual Sides</h3>
+        <o>Like margins, CSS has properties for specifying the padding for each side of an element: padding-top, padding-right, padding-bottom and padding-left.</o>
+        <p>Unlike margins, padding properties don't have an auto value and negative values are not allowed.</p>
+        <h3>Padding - Shorthand Property</h3>
+        <p>Same as margin, we can shorten the code by specifying all the padding properties in one property:</p>
+        <div class="example">
+          <p>
+            div {<br>
+              padding: 25px 50px 75px 100px;<br>
+            }
+          </p>
+        </div>
+        <h3>Padding and Element Width</h3>
+        <p>The CSS width property specifies the width of the element's content area. The content area is the portion inside the padding, border, and margin of an element (the box model). If an element has a specified width, the padding added to that element will be added to the total width of the element.</p>
+        <p><strong>Solution:</strong> To keep the width at 300px, no matter the amount of padding, you can use the box-sizing property. This causes the element to maintain its actual width.</p>
+        <div class="example">
+          <p>
+            div {<br>
+              width: 300px;<br>
+              padding: 25px;<br>
+              box-sizing: border-box;<br>
+            }
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>CSS Height, Width and Max-width</h2>
+        <p>The CSS height and width properties are used to set the height and width of an element.</p>
+        <p>The CSS max-width property is used to set the maximum width of an element.</p>
+        <h3>CSS height and width Values</h3>
+        <p>The height and width properties may have the following values:</p>
+        <ul>
+          <li>auto - This is default. The browser calculates the height and width</li>
+          <li>length - Defines the height/width in px, cm</li>
+          <li>% - Defines the height/width in percent of the containing block</li>
+          <li>initial - Sets the height/width to its default value</li>
+          <li>inherit - The height/width will be inherited from its parent value</li>
+        </ul>
+        <h3>Max-width</h3>
+        <p>The max-width can be specified in length values, like px, cm, or in percent (%) of the containing block, or set to none.</p>
+        <p>Let's say we have a &lt;div&gt; element with a width of 500px. If the browser window is smaller than the width of the element, it will add a horizontal scrollbar to our page. To improve the browser's handling of small windows, we can use max-width solve this problem.</p>
+      </section>
+      <section>
+        <h2>CSS Box Model</h2>
+        <p>In CSS, the term "box model" is used when talking about design and layout. It is essentially a box that wraps around every HTML element and it consists of: content, padding, borders and margins.</p>
+        <p>In order to set the width and height of an element correctly in all browsers, we need to know how the box model works.</p>
+        <p>When we set the width and height properties of an element with CSS, we just set the width and height of the content area. To calculate the total width and height of an element, we must also include the padding and borders.</p>
+        <p>The total width of an element should be calculated like this:<br> Total element width = width + left padding + right padding + left border + right border</p>
+        <p>The total height of an element should be calculated like this:<br> Total element height = height + top padding + bottom padding + top border + bottom border</p>
+      </section>
+      <section>
+        <h2>CSS Outline</h2>
+        <p>An outline is a line drawn outside the element's border. CSS has the following outline properties: outline-style, outline-color, outline-width, outline-offset and the shorthand outline.</p>
+        <!-- Outline example -->
+        <h3>CSS Outline Style</h3>
+        <p>The outline-style property specifies the style of the outline, and can have one of the following values: dotted, dashed, solid, double, groove, ridge, inset, outset, none or hidden.</p>
+        <h3>CSS Outline Width</h3>
+        <p>The outline-width property specifies the width of the outline, and can have one of the following values: thin, medium, thick or a specific size.</p>
+        <h3>CSS Outline Colour</h3>
+        <p>The outline-color property is used to set the colour of the outline. It can be set by: name, HEX, RGB, HSL or invert.</p>
+        <h3>CSS Outline - Shorthand property</h3>
+        <p>The outline property is a shorthand property for setting the following individual outline properties: outline-width, outline-style (required) and outline-color.</p>
+      </section>
+      <section>
+        <h2>CSS Text</h2>
+        <p>CSS has a lot of properties for formatting text.</p>
+        <h3>Text Colour</h3>
+        <p>The colour property is used to set the colour of the text. The colour is specified by: a colour name, a HEX value or an RGB value.</p>
+        <div class="example">
+          <p>
+            body {<br>
+              color: blue;<br>
+            }<br><br>
+            
+            h1 {<br>
+              color: green;<br>
+            }
+          </p>
+        </div>
+        <aside>
+          <p><strong>Note:</strong> High contrast is very important for people with vision problems. We should always ensure that the contrast between the text colour and the background colour is good.</p>
+        </aside>
+        <h3>Text Alignment</h3>
+        <p>The text-align property is used to set the horizontal alignment of a text. A text can be left or right aligned, centered, or justified.</p>
+        <h3>Text Decoration</h3>
+        <p>The text-decoration-line property is used to add a decoration line to text.</p>
+        <p>The text-decoration-color property is used to set the colour of the decoration line.</p>
+        <p>The text-decoration-style property is used to set the style of the decoration line.</p>
+        <p>The text-decoration-thickness property is used to set the thickness of the decoration line.</p>
+        <p>To shorten the code, we can write:</p>
+        <div class="example">
+          <p>
+            p {<br>
+              text-decoration: underline red double 5px;<br>
+            }
+          </p>
+        </div>
+        <h3>Text Transformation</h3>
+        <p>The text-transform property is used to specify uppercase and lowercase letters in a text. We can use it to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word.</p>
+        <h3>Text Spacing</h3>
+        <p>The text-indent property is used to specify the indentation of the first line of a text.</p>
+        <h3>Letter Spacing</h3>
+        <p>The letter-spacing property is used to specify the space between the characters in a text.</p>
+        <h3>Line Height</h3>
+        <p>The line-height property is used to specify the space between lines.</p>
+        <h3>Word Spacing</h3>
+        <p>The word-spacing property is used to specify the space between the words in a text.</p>
+        <h3>White Space</h3>
+        <p>The white-space property specifies how white-space inside an element is handled.</p>
+        <h3>Text Shadow</h3>
+        <p>The text-shadow property adds shadow to text.</p>
+      </section>
+      <section>
+        <h2>CSS Fonts</h2>
+        <p>Choosing the right font has a huge impact on how the readers experience a website. Using a font that is easy to read is important. The font adds value to our text. It is also important to choose the correct colour and text size for the font.</p>
+        <h3>The CSS font-family Property</h3>
+        <p>In CSS, we use the font-family property to specify the font of a text.</p>
+        <div class="example">
+          <p>
+            .p {<br>
+              font-family: "Times New Roman", Times, serif;<br>
+            }
+          </p>
+        </div>
+        <h3>What are Web Safe Fonts?</h3>
+        <p>Web safe fonts are fonts that are universally installed across all browsers and devices. However, there are no 100% completely web safe fonts. Therefore, it is very important to always use fallback fonts.</p>
+        <p>This means that we should add a list of similar "backup fonts" in the font-family property. If the first font does not work, the browser will try the next one. We should always end the list with a generic font family name.</p>
+        <h3>Best Web Safe Fonts for HTML and CSS</h3>
+        <p>Arial, Verdana, Tahoma, Trebuchet MS, Times New Roman, Georgia, Garamond, Courier New and Brush Script MT.</p>
+        <h3>Font Style</h3>
+        <p>The font-style property is mostly used to specify italic text.</p>
+        <h3>Font Weight</h3>
+        <p>The font-weight property specifies the weight of a font.</p>
+        <h3>Font Variant</h3>
+        <p>The font-variant property specifies whether or not a text should be displayed in a small-caps font.</p>
+        <h3>Font Size</h3>
+        <p>The font-size property sets the size of the text. Setting the text size with pixels gives you full control over the text size. If we want to allow users to resize the text (in the browser menu), we will use em instead of pixels.</p>
+        <p>1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px. We can calculate the size from pixels to em using the formula: pixels/16=em.</p>
+        <h3>Responsive Font Size</h3>
+        <p>The text size can be set with a vw unit, which means the "viewport width". That way the text size will follow the size of the browser window.</p>
+        <h3>How To Use Google Fonts?</h3>
+        <p>Just add a special style sheet link in the &lt;head&gt; section and then refer to the font in the CSS.</p>
+        <div class="example">
+          <p>
+            &lt;head&gt;<br>
+              &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"&gt;<br>
+              &lt;style&gt;<br>
+              body {<br>
+                font-family: "Sofia", sans-serif;<br>
+              }<br>
+              &lt;/style&gt;<br>
+              &lt;/head&gt;
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>CSS Links</h2>
+        <p>With CSS, links can be styled in many different ways.</p>
+        <h3>Styling Links</h3>
+        <p>Links can be styled with any CSS property, like color, font-family, background.</p>
+        <div class="example">
+          <p>
+            a {<br>
+              color: hotpink;<br>
+            }
+          </p>
+        </div>
+        <p>We can also style the links differently depending on what state they are in:</p>
+        <uL>
+          <li>a:link - a normal, unvisited link</li>
+          <li>a:visited - a link the user has visited</li>
+          <li>a:hover - a link when the user mouses over it</li>
+          <li>a:active - a link the moment it is clicked</li>
+        </uL>
+        <h3>Text Decoration</h3>
+        <p>The text-decoration property is mostly used to remove underlines from links.</p>
+        <h3>Background Color</h3>
+        <p>The background-color property can be used to specify a background colour for links.</p>
+      </section>
+      <section>
+        <h2>CSS Lists</h2>
+        <h3>HTML Lists and CSS List Properties</h3>
+        <p>In HTML, there are two main types of lists:</p>
+        <ul>
+          <li>unordered lists (&lt;ul&gt;) - the list items are marked with bullets</li>
+          <li>ordered lists (&lt;ol&gt;) - the list items are marked with numbers or letters</li>
+        </ul>
+        <p>The CSS list properties allow you to:</p>
+        <ul>
+          <li>Set different list item markers for ordered lists</li>
+          <li>Set different list item markers for unordered lists</li>
+          <li>Set an image as the list item marker</li>
+          <li>Add background colorus to lists and list items</li>
+        </ul>
+        <h3>Different List Item Markers</h3>
+        <p>The list-style-type property specifies the type of list item marker(circle, square, upper-roman, lower-alpha).</p>
+        <h3>Position The List Item Markers</h3>
+        <p>The list-style-position property specifies the position of the list-item markers (bullet points). Outside means that the bullet points will be outside the list item. Inside means that the bullet points will be inside the list item.</p>
+        <h3>Remove Default Settings</h3>
+        <p>The list-style-type:none property can also be used to remove the markers/bullets. The list also has padding and margin, to remove them we add padding:0 and margin:0 to &lt;ul&gt; or &lt;ol&gt;.</p>
+        <div class="example">
+          <p>
+            ul {<br>
+              list-style-type: none;<br>
+              margin: 0;<br>
+              padding: 0;<br>
+            }
+          </p>
+        </div>
+        <h3>Styling List With Colours</h3>
+        <p>We can also style lists with colours, to make them look a little more interesting. Anything added to the &lt;ol&gt; or &lt;ul&gt; tag, affects the entire list, while properties added to the &lt;li&gt; tag will affect the individual list items.</p>
+      </section>
+      <section>
+        <h2>CSS Tables</h2>
+        <p>With CSS, HTML tables can be greatly improved.</p>
+        <h3>Table Borders</h3>
+        <p>To specify table borders in CSS, use the border property. If we need a table that should span the entire screen, we will add width: 100% to the &lt;table&gt; element.</p>
+        <h3>Table Width and Height</h3>
+        <p>The width and height of a table are defined by the width and height properties. If we want our table to span only half the page, we will use width: 50%.</p>
+        <h3>Horizontal Alignment</h3>
+        <p>The text-align property sets the horizontal alignment (like left, right, or center) of the content in &lt;th&gt; or &lt;td&gt;. To center-align the content of &lt;td&gt; elements as well, we will use text-align: center.</p>
+        <h3>Vertical Alignment</h3>
+        <p>The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in &lt;th&gt; or &lt;td&gt;.</p>
+        <h3>Table Padding</h3>
+        <p>To control the space between the border and the content in a table, use the padding property on &lt;td&gt; and &lt;th&gt; elements.</p>
+        <h3>Hoverable Table</h3>
+        <p>Use the :hover selector on &lt;tr&gt; to highlight table rows on mouse over.</p>
+        <h3>Responsive Table</h3>
+        <p>A responsive table will display a horizontal scroll bar if the screen is too small to display the full content. To make a table responsive, we will add a container element (like &lt;div&gt;) with overflow-x:auto around the &lt;table&gt; element.</p>
+        <div class="example">
+          <p>
+            &lt;div style="overflow-x:auto;"&gt;<br><br>
+
+              &lt;table&gt;<br>
+              ... table content ...<br>
+              &lt;/table&gt;<br><br>
+              
+            &lt;/div&gt;
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>CSS Display</h2>
+        <p>The display property is used to specify how an element is shown on a web page. Like we learned in the HTML tutorial, elements have block and inline display values. The display property is used to change the default display behavior of HTML elements.</p>
+        <h3>Block-level Elements</h3>
+        <p>A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
+        <!-- block-level example-->
+        <h3>Inline Elements</h3>
+        <p>An inline element doesn't start on a new line and only takes up as much width as necessary.</p>
+        <!-- inline example -->
+        <h3>The display: inline-block Value</h3>
+        <p>Compared to display: inline, the major difference is that display: inline-block allows us to set a width and height on the element. With display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.</p>
+        <p>Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.</p>
+        <p>One common use for display: inline-block is to display list items horizontally instead of vertically, like navigation links.</p>
+      </section>
+      <section>
+        <h2>CSS Position</h2>
+        <p>The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).</p>
+        <h3>The position Property</h3>
+        <p>There are five different position values:</p>
+        <ul>
+          <li>static</li>
+          <li>relative</li>
+          <li>fixed</li>
+          <li>absolute</li>
+          <li>sticky</li>
+        </ul>
+        <p>An element with position: relative; is positioned relative to its normal position.</p>
+        <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. A fixed element does not leave a gap in the page where it would normally have been located.</p>
+        <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.</p>
+        <p>An element with position: sticky; is positioned based on the user's scroll position. A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place.</p>
+      </section>
+      <section>
+        <h2>CSS Z-index</h2>
+        <p>The z-index property specifies the stack order of an element.</p>
+        <h3>The z-index Property</h3>
+        <p>When elements are positioned, they can overlap other elements. The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others). An element can have a positive or negative stack order.</p>
+      </section>
+      <section>
+        <h2>CSS Overflow</h2>
+        <p>The CSS overflow property controls what happens to content that is too big to fit into an area, whether to clip the content or to add scrollbars. The overflow property has the following values:</p>
+        <ul>
+          <li>visible - The overflow is not clipped. The content renders outside the element's box</li>
+          <li>hidden - The overflow is clipped, and the rest of the content will be invisible</li>
+          <li>scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content</li>
+          <li>auto - Similar to scroll, but it adds scrollbars only when necessary</li>
+        </ul>
+      </section>
+      <section>
+        <h2>CSS Float</h2>
+        <p>The CSS float property specifies how an element should float.</p>
+        <p>The CSS clear property specifies what elements can float beside the cleared element and on which side.</p>
+        <h3>The float Property</h3>
+        <p>The float property is used for positioning and formatting content, like letting an image float left to the text in a container. The float property can have one of the following values:</p>
+        <ul>
+          <li>left - The element floats to the left of its container</li>
+          <li>right - The element floats to the right of its container</li>
+          <li>none - The element does not float (will be displayed just where it occurs in the text)</li>
+          <li>inherit - The element inherits the float value of its parent</li>
+        </ul>
+        <h3>The clear Property</h3>
+        <p>When we use the float property, and we want the next element below (not on right or left), we will have to use the clear property. The clear property specifies what should happen with the element that is next to a floating element. The clear property can have one of the following values:</p>
+        <ul>
+          <li>none - The element is not pushed below left or right floated elements</li>
+          <li>left - The element is pushed below left floated elements</li>
+          <li>right - The element is pushed below right floated elements</li>
+          <li>both - The element is pushed below both left and right floated elements</li>
+          <li>inherit - The element inherits the clear value from its parent</li>
+        </ul>
+      </section>
+      <section>
+        <h2>CSS Align</h2>
+        <p>Let's see how we can center elements horizontally and vertically.</p>
+        <h3>Center Align Elements</h3>
+        <p>To horizontally center a block element (like &lt;div&gt;), we use margin: auto. Setting the width of the element will prevent it from stretching out to the edges of its container. The element will then take up the specified width, and the remaining space will be split equally between the two margins.</p>
+        <div class="example">
+          <p>
+            div {<br>
+              margin: auto;<br>
+              width: 50%;<br>
+              padding: 10px;<br>
+            }
+          </p>
+        </div>
+        <h3>Center Align Text</h3>
+        <p>To just center the text inside an element, we use text-align: center.</p>
+        <div class="example">
+          <p>
+            p {<br>
+              text-align: center;<br>
+            }
+          </p>
+        </div>
+        <h3>Center an Image</h3>
+        <p>To center an image, we set left and right margin to auto and make it into a block element.</p>
+        <div class="example">
+          <p>
+            img {<br>
+              display: block;<br>
+              margin-left: auto;<br>
+              margin-right: auto;<br>
+              width: 40%;<br>
+            }
+          </p>
+        </div>
+        <h3>Left and Right Align - Using position</h3>
+        <p>Another method for aligning elements is to use position: absolute.</p>
+        <div class="example">
+          <p>
+            div {<br>
+              position: absolute;<br>
+              right: 0px;<br>
+              width: 300px;<br>
+              padding: 10px;<br>
+            }
+          </p>
+        </div>
+        <aside>
+          <p>Absolute positioned elements are removed from the normal flow, and can overlap elements.</p>
+        </aside>
+        <h3>Left and Right Align - Using float</h3>
+        <p>Also we can use the float property to align elements.</p>
+        <div class="example">
+          <p>
+            div {<br>
+              float: right;<br>
+              width: 300px;<br>
+              padding: 10px;<br>
+            }
+          </p>
+        </div>
+        <p>If an element is taller than the element containing it, and it is floated, it will overflow outside of its container. We can use the "clearfix hack" to fix this.</p>
+        <div class="example">
+          <p>
+            div::after {<br>
+              content: "";<br>
+              clear: both;<br>
+              display: table;<br>
+            }
+          </p>
+        </div>
+        <h3>Center Vertically - Using padding</h3>
+        <p>A simple solution is to use top and bottom padding.</p>
+        <div class="example">
+          <p>
+            div {<br>
+              padding: 70px 0;<br>
+            }
+          </p>
+        </div>
+        <p>To center both vertically and horizontally, we will use padding and text-align: center.</p>
+        <div class="example">
+          <p>
+            div {<br>
+              padding: 70px 0;<br>
+              text-align: center;<br>
+            }
+          </p>
+        </div>
+        <h3>Center Vertically - Using line-height</h3>
+        <p>Another trick is to use the line-height property with a value that is equal to the height property.</p>
+        <div class="example">
+          <p>
+            div {<br>
+              line-height: 200px;<br>
+              height: 200px;<br>
+              text-align: center;<br>
+            }<br><br>
+            
+            /* If the text has multiple lines, add the following: */<br>
+            div p {<br>
+              line-height: 1.5;<br>
+              display: inline-block;<br>
+              vertical-align: middle;<br>
+            }
+          </p>
+        </div>
+        <h3>Center Vertically - Using position & transform</h3>
+        <p>If padding and line-height are not options, another solution is to use positioning and the transform property.</p>
+        <div class="example">
+          <p>
+            div {<br>
+              height: 200px;<br>
+              position: relative;<br>
+            }<br><br>
+            
+            div p {<br>
+              margin: 0;<br>
+              position: absolute;<br>
+              top: 50%;<br>
+              left: 50%;<br>
+              transform: translate(-50%, -50%);<br>
+            }
+          </p>
+        </div>
+        <h3>Center Vertically - Using Flexbox</h3>
+        <p>We can also use flexbox to center things.</p>
+        <div class="example">
+          <p>
+            div {<br>
+              display: flex;<br>
+              justify-content: center;<br>
+              align-items: center;<br>
+              height: 200px;<br>
+            }
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>CSS Combinators</h2>
+        <p>A combinator is something that explains the relationship between the selectors. A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.</p>
+        <p>There are four different combinators in CSS:</p>
+        <ul>
+          <li>descendant selector (space)</li>
+          <li>child selector (&gt;)</li>
+          <li>adjacent sibling selector (+)</li>
+          <li>general sibling selector (~)</li>
+        </ul>
+        <h3>Descendant Selector</h3>
+        <p>The descendant selector matches all elements that are descendants of a specified element.</p>
+        <div class="example">
+          <p>
+            div p {<br>
+              background-color: yellow;<br>
+            }
+          </p>
+        </div>
+        <h3>Child Selector (&gt;)</h3>
+        <p>The child selector selects all elements that are the children of a specified element.</p>
+        <div class="example">
+          <p>
+            div &gt; p {<br>
+              background-color: yellow;<br>
+            }
+          </p>
+        </div>
+        <h3>Adjacent Sibling Selector (+)</h3>
+        <p>The adjacent sibling selector is used to select an element that is directly after another specific element. Sibling elements must have the same parent element.</p>
+        <div class="example">
+          <p>
+            div + p {<br>
+              background-color: yellow;<br>
+            }
+          </p>
+        </div>
+        <h3>General Sibling Selector (~)</h3>
+        <p>The general sibling selector selects all elements that are next siblings of a specified element.</p>
+        <div class="example">
+          <p>
+            div ~ p {<br>
+              background-color: yellow;<br>
+            }
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>CSS Pseudo-class</h2>
+        <h3>What are Pseudo-classes?</h3>
+        <p>A pseudo-class is used to define a special state of an element, like when a user mouses over it, when the element get focus, visited or unvisited links.</p>
+        <h3>Syntax</h3>
+        <div class="example">
+          <p>
+            selector:pseudo-class {<br>
+              property: value;<br>
+            }
+          </p>
+        </div>
+        <h3>Anchor Pseudo-classes</h3>
+        <p>Links can be displayed in different ways, depending if the link was clicked, visited or hovered over (a:link, a:visited, a:hover and a:active).</p>
+        <h3>Pseudo-classes and HTML Classes</h3>
+        <p>Pseudo-classes can be combined with HTML classes.</p>
+        <div class="example">
+          <p>
+            div:hover {<br>
+              background-color: blue;<br>
+            }
+          </p>
+        </div>
+        <!-- Add Simple Tooltip Hover -->
       </section>
     </main>
   </body>

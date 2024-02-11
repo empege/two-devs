@@ -1,0 +1,9 @@
+.hidden {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+.hint:hover .hidden {
+  display: block;
+}
