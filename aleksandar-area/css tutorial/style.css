@@ -1,9 +1,26 @@
-.hidden {
-  display: none;
-  background-color: yellow;
-  padding: 20px;
+/* .theme-dark .example {
+  background-color: black;
+  color: white;
+} */
+.theme-dark {
+  background: black;
+  color: white;
+  .example {
+    background-color: purple;
+    color: orange;
+  }
+  
 }
 
-.hint:hover .hidden {
-  display: block;
+.theme-light {
+  background: white;
+  color: black;
+  .example {
+    background-color: yellowgreen;
+    color: blueviolet;
+  }
 }
+/* .example {
+  background-color: yellowgreen;
+  color: blueviolet;
+} */
