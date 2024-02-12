@@ -17,7 +17,7 @@
     <main>
       <section>
         <h2>What is CSS?</h2>
-        <p><abbr title="Cascading Style Sheets">CSS</abbr> is the language we use to style a Web page. It describes how HTML elements are to be displayed on screen and can control the layout of multiple web pages all at once.</p>
+        <p><abbr title="Cascading Style Sheets">CSS</abbr> is a stylesheet language we use to style a Web page. It describes how HTML elements are to be displayed on screen and can control the layout of multiple web pages all at once.</p>
         <h2>Why use CSS?</h2>
         <p>We use CSS to define styles for our web pages, including the design, layout and variations in display for different devices and screen sizes. CSS removed the style formatting from the HTML page. The style definitions are normally saved in external .css files. With an external stylesheet file, we can change the look of an entire website by changing just one file.</p>
       </section>
@@ -28,9 +28,9 @@
         <p>The selector points to the HTML element we want to style.</p>
         <p>The declaration block contains one or more declarations separated by semicolons. Each declaration includes a CSS property name and a value, separated by a colon. Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces:</p>
         <h2>Let's explain the example above</h2>
-        <p>h1 is a selector in CSS (it points to the HTML element we want to style: &lt;h1&gt;)</p>
-        <p>color is a property, and blue is the property value</p>
-        <p>font-size is a property, and 12 pixels is the property value</p>
+        <p>h1 is a selector in CSS (it points to the HTML element we want to style: &lt;h1&gt;).</p>
+        <p>color is a property, and blue is the property value.</p>
+        <p>font-size is a property, and 12 pixels is the property value.</p>
       </section>
       <section>
         <h2>CSS Selectors</h2>
@@ -53,11 +53,7 @@
             }
           </p>
         </div>
-        <aside>
-          <div class="hint">What's the outcome?
-            <p class="hidden">All paragraphs on the page will be center-aligned and will be red.</p>
-          </div>
-        </aside>
+          <p>All paragraphs on the page will be center-aligned and will be red.</p>
         <h2>The CSS id Selector</h2>
         <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
         <p>The id of an element is unique within a page, so the id selector is used to select one unique element.</p>
@@ -70,9 +66,7 @@
             }
           </p>
         </div>
-        <aside>
           <p>The CSS rule will only apply to the paragraph with the id="p1".</p>
-        </aside>
         <p><strong>Note:</strong> An id name cannot start with a number.</p>
         <h2>The CSS class Selector</h2>
         <p>The class selector selects HTML elements with a specific class attribute.</p>
@@ -85,9 +79,7 @@
             }
           </p>
         </div>
-        <aside>
           <p>All elements with class="center" will be red and center-aligned</p>
-        </aside>
         <p>We can also specify that only specific elements should be affected by a class.</p>
         <div class="example">
           <p>
@@ -97,10 +89,10 @@
             }
           </p>
         </div>
-        <aside>
-          <p>Only &lt;p&gt; elements with class="center" will be red and center-aligned</p>
-        </aside>
+          <p>Only &lt;p&gt; elements with class="center" will be red and center-aligned.</p>
         <p><strong>Note:</strong> Like with id, a class name cannot start with a number.</p>
+        <h3>Id or class? Which should we use?</h3>
+        <p>We should use a class if we need to use the same selector more than once within a page or a site. While an id is specific to a single element, classes can be assigned to multiple elements on a page or throughout the website.</p>
         <h2>The CSS Universal Selector</h2>
         <p>The universal selector (*) selects all HTML elements on the page.</p>
         <div class="example">
@@ -110,8 +102,6 @@
               color: blue;<br>
             }
           </p>
-        </div>
-        <aside>This CSS rule will affect every HTML element on the page.</aside>
         <h2>The CSS Grouping Selector</h2>
         <p>The grouping selector selects all the HTML elements with the same style definitions.</p>
         <div class="example">
@@ -132,9 +122,7 @@
             }
           </p>
         </div>
-        <aside>
           <p>Because the h1, h2, and p elements have the same style definitions, we can minimize the code by grouping the selectors. This is done by separating each selector with a comma.</p>
-        </aside>
         <div class="example">
           <p>
             h1, h2, p {<br>
@@ -161,9 +149,7 @@
             &lt;/head&gt;
           </p>
         </div>
-        <aside>
           <p>An external style sheet can be written in any text editor, and must be saved with a .css extension. The external .css file should not contain any HTML tags.</p>
-        </aside>
         <h3>Let's take a look at an external .css file</h3>
         <div class="example">
           <p>
@@ -208,8 +194,8 @@
             &lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
           </p>
         </div>
-        <h3>Multiple Style Sheets</h3>
-        <p>If the internal style is defined after the link to the external style sheet, it will override the external style sheet.</p>
+        <h3>Multiple Stylesheets</h3>
+        <p>If the internal style is defined after the link to the external stylesheet, it will override the external stylesheet.</p>
         <div class="example">
           <p>
             &lt;head&gt;<br>
@@ -222,10 +208,8 @@
               &lt;/head&gt;
           </p>
         </div>
-        <aside>
           <p>In this case, the colour of the &lt;h1&gt; element will be orange.</p>
-        </aside>
-        <p>However, if the internal style is defined before the link to the external style sheet, the &lt;h1&gt; elements will be navy:</p>
+        <p>However, if the internal style is defined before the link to the external stylesheet, the &lt;h1&gt; elements will be navy:</p>
         <div class="example">
           <p>
             &lt;head&gt;<br>
@@ -238,17 +222,33 @@
               &lt;/head&gt;
           </p>
         </div>
-        <h3>Cascading Order</h3>
+        <h2>Cascading Order</h2>
         <p>When there is more than one style specified for an HTML element, what style will be used?</p>
         <p>The priority list looks like this:</p>
         <ol>
           <li>Inline style (inside an HTML element)</li>
-          <li>External and internal style sheets (in the head section)</li>
+          <li>External and internal stylesheets (in the head section)</li>
           <li>Browser default</li>
         </ol>
-        <aside>
           <p>Thus, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
-        </aside>
+        <h3>CSS The !important Rule</h3>
+        <p>The !important rule in CSS is used to add more importance to a property/value than normal. If we use the !important rule, it will override all previous styling rules for that specific property on that element. </p>
+        <div class="example">
+          <p>
+            #myid {<br>
+              background-color: blue;<br>
+            }<br><br>
+            
+            .myclass {<br>
+              background-color: gray;<br>
+            }<br><br>
+            
+            p {<br>
+              background-color: red !important;<br>
+            }
+          </p>
+        </div>
+        <p>Even though the id selector and the class selector have a higher specificity, the !important rule overrides the background-color property in both cases.</p>
       </section>
       <section>
         <h2>CSS Comments</h2>
@@ -272,10 +272,8 @@
         <div class="example">
           <!-- Represent elements with colour -->
         </div>
-        <aside>
-          <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
-        </aside>
-        <h3>CSS Background Color</h3>
+          <p>Colours are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
+        <h3>CSS Background Colour</h3>
         <p>We can set the background colour for HTML elements:</p>
         <div class="example">
           <p>
@@ -319,9 +317,7 @@
           <li>background-attachment</li>
           <li>background-position</li>
         </ul>
-        <aside>
           <p>To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.</p>
-        </aside>
         <div class="example">
           <p>Instead of writing:</p>
           <p>body {<br>
@@ -366,9 +362,7 @@
             }
           </p>
         </div>
-        <aside>
           <p>The image above is repeated only horizontally (background-repeat: repeat-x)</p>
-        </aside>
         <h3>CSS background-repeat: no-repeat</h3>
         <p>Showing the background image only once is also specified by the background-repeat property.</p>
         <div class="example">
@@ -402,9 +396,7 @@
             }
           </p>
         </div>
-        <aside>
           <p>To specify that the background image should scroll with the rest of the page, use background-attachment: scroll.</p>
-        </aside>
       </section>
       <section>
         <h2>CSS Borders</h2>
@@ -542,9 +534,7 @@
             }
           </p>
         </div>
-        <aside>
           <p><strong>Note:</strong> High contrast is very important for people with vision problems. We should always ensure that the contrast between the text colour and the background colour is good.</p>
-        </aside>
         <h3>Text Alignment</h3>
         <p>The text-align property is used to set the horizontal alignment of a text. A text can be left or right aligned, centered, or justified.</p>
         <h3>Text Decoration</h3>
@@ -820,9 +810,7 @@
             }
           </p>
         </div>
-        <aside>
           <p>Absolute positioned elements are removed from the normal flow, and can overlap elements.</p>
-        </aside>
         <h3>Left and Right Align - Using float</h3>
         <p>Also we can use the float property to align elements.</p>
         <div class="example">
@@ -981,8 +969,115 @@
             }
           </p>
         </div>
-        <!-- Add Simple Tooltip Hover -->
+        <h3>CSS - The :first-child Pseudo-class</h3>
+        <p>The :first-child pseudo-class matches a specified element that is the first child of another element.</p>
+      </section>
+      <section>
+        <h2>CSS Pseudo-element</h2>
+        <p>A CSS pseudo-element is used to style specified parts of an element, like style the first letter, or line, insert content before, or after the content.</p>
+        <h3>Syntax</h3>
+        <p>
+          selector::pseudo-element {<br>
+            property: value;<br>
+          }
+        </p>
+        <p>Did you notice the double colon notation - ::first-line versus :first-line? The double colon replaced the single-colon notation for pseudo-elements in CSS3 to distinguish between pseudo-classes and pseudo-elements.</p>
+        <h3>The ::first-line Pseudo-element</h3>
+        <p>The ::first-line pseudo-element is used to add a special style to the first line of a text.</p>
+        <h3>The ::first-letter Pseudo-element</h3>
+        <p>The ::first-letter pseudo-element is used to add a special style to the first letter of a text.</p>
+        <h3>Pseudo-elements and HTML Classes</h3>
+        <p>Pseudo-elements can be combined with HTML classes.</p>
+        <div class="example">
+          <p>
+            p.intro::first-letter {<br>
+              color: #ff0000;<br>
+              font-size: 200%;<br>
+            }
+          </p>
+        </div>
+        <p>The first letter of paragraphs with class="intro", in red and in a larger size.</p>
+        <h3>CSS - The ::before Pseudo-element</h3>
+        <p>The ::before pseudo-element can be used to insert some content before the content of an element.</p>
+        <h3>CSS - The ::after Pseudo-element</h3>
+        <p>The ::after pseudo-element can be used to insert some content after the content of an element.</p>
+        <h3>CSS - The ::marker Pseudo-element</h3>
+        <p>The ::marker pseudo-element selects the markers of list items.</p>
+        <h3>CSS - The ::selection Pseudo-element</h3>
+        <p>The ::selection pseudo-element matches the portion of an element that is selected by a user. Color, background, cursor and outline can be applied to ::selection.</p>
+      </section>
+      <section>
+        <h2>CSS Opacity / Transparency</h2>
+        <p>The opacity property specifies the opacity/transparency of an element.</p>
+        <h3>Transparent Image</h3>
+        <p>The opacity property can take a value from 0.0 - 1.0. The lower the value, the more transparent.</p>
+        <h3>Transparent Hover Effect</h3>
+        <p>The opacity property is often used together with the :hover selector to change the opacity on mouse-over.</p>
+      </section>
+      <section>
+        <h2>CSS Navigation Bar</h2>
+        <h3>Navigation Bar = List of Links</h3>
+        <p>To create a navigation bar, we need standard HTML as a base. It is a list of links, so we will use the &lt;ul&gt; and &lt;li&gt; elements.</p>
+        <div class="example">
+          <p>
+            &lt;ul&gt;<br>
+              &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+              &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;<br>
+              &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+              &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+            &lt;/ul&gt;
+          </p>
+        </div>
+        <p>To make our list a navigation bar, we will add the following CSS:</p>
+        <div class="example">
+          <p>
+            ul {<br>
+              list-style-type: none;<br>
+              margin: 0;<br>
+              padding: 0;<br>
+            }
+          </p>
+        </div>
+        <p>The list-style-type: none; removes the bullets. A navigation bar does not need list markers. margin: 0; and padding: 0; to remove browser default settings.</p>
+        <h3>Vertical Navigation Bar</h3>
+        <p>To build a vertical navigation bar, we can style the &lt;a&gt; elements inside the list.</p>
+        <div class="example">
+          <p>
+            li a {<br>
+              display: block;<br>
+            }
+          </p>
+        </div>
+        <p>display: block; - displays the links as block elements which makes the whole link area clickable and it allows us to specify the width.</p>
+        <h3>Horizontal Navigation Bar</h3>
+        <p>We can create a horizontal navigation bar by using inline or floating list items.</p>
+        <h3>Inline List Items</h3>
+        <p>The first way is to specify the &lt;li&gt; elements as inline:</p>
+        <div class="example">
+          <p>
+            li {<br>
+              display: inline;<br>
+            }
+          </p>
+        </div>
+        <p>display: inline; removes the line breaks before and after each list item, to display them on one line.</p>
+        <h3>Floating List Items</h3>
+        <p>The second way is to float the &lt;li&gt; elements, and specify a layout for the navigation links:</p>
+        <div class="example">
+          <p>
+            li {<br>
+              float: left;<br>
+            }<br><br>
+            
+            a {<br>
+              display: block;<br>
+            }
+          </p>
+        </div>
+        <p>float: left; floats elements next to each other, display: block; allows us to specify padding.</p>
       </section>
     </main>
+        <!-- Novine u CSS-u i dodaj neke (nesting) -->
+        <!-- CSS Variables - The var() Function -->
   </body>
 </html>
