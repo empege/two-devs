@@ -447,9 +447,11 @@
         </div>
         <p>To shorten the code, we can specify all the margin properties in one property.</p>
         <div class="example">
-          <p>p {<br>
+          <p>
+            p {<br>
             margin: 25px 50px 75px 100px;<br>
-          }</p>
+            }
+          </p>
         </div>
       </section>
       <section>
@@ -1075,6 +1077,124 @@
           </p>
         </div>
         <p>float: left; floats elements next to each other, display: block; allows us to specify padding.</p>
+      </section>
+      <section>
+        <h2>CSS Dropdowns</h2>
+        <p>A dropdown is a list of options that is revealed only when a user interacts with the menu by clicking or hovering over it with their cursor.</p>
+        <p>To create a basic dropdown, we will use any element to open the dropdown content, like a &lt;span&gt; or &lt;button&gt; element. Then we will use a container element, like &lt;div&gt;, to create the dropdown content and add what we want. We will wrap a &lt;div&gt; element around the elements to position the dropdown content correctly using CSS.</p>
+        <p>Now, in the .css file, we set display:none on the dropdown content so it is hidden. Then we will add position:relative to the &lt;div&gt; that we wrapped our elements in, and position:absolute to the dropdown content so its placed right below the dropdown button. If we want the dropdown content to be as wide as our dropdown button, we will set the width to 100% and overflow:auto to enable scrolling on smaller screens.</p>
+        <p>Finally, we use the :hover selector on the dropdown button to reveal the dropdown menu when we move our mouse over it.</p>
+      </section>
+      <section>
+        <h2>CSS Attribute Selectors</h2>
+        <p>We can style HTML elements that have specific attributes or attribute values.</p>
+        <h3>CSS [attribute] Selector</h3>
+        <p>The [attribute] selector is used to select elements with a specified attribute.</p>
+        <div class="example">
+          <p>
+            a[target] {<br>
+              background-color: yellow;<br>
+            }
+          </p>
+        </div>
+        <h3>CSS [attribute="value"] Selector</h3>
+        <p>The [attribute="value"] selector is used to select elements with a specified attribute and value.</p>
+        <div class="example">
+          <p>
+            a[target="_blank"] {<br>
+              background-color: yellow;<br>
+            }
+          </p>
+        </div>
+        <h3>CSS [attribute~="value"] Selector</h3>
+        <p>The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word.</p>
+        <div class="example">
+          <p>
+            [title~="flower"] {<br>
+              background-color: yellow;<br>
+            }
+          </p>
+        </div>
+        <h3>CSS [attribute|="value"] Selector</h3>
+        <p>The [attribute|="value"] selector is used to select elements with the specified attribute, whose value can be exactly the specified value, or the specified value followed by a hyphen (-).</p>
+        <div class="example">
+          <p>
+            [class|="top"] {<br>
+              background: yellow;<br>
+            }
+          </p>
+        </div>
+        <h3>CSS [attribute^="value"] Selector</h3>
+        <p>The [attribute^="value"] selector is used to select elements with the specified attribute, whose value starts with the specified value.</p>
+        <div class="example">
+          <p>
+            [class^="top"] {<br>
+              background: yellow;<br>
+            }
+          </p>
+        </div>
+        <h3>CSS [attribute$="value"] Selector</h3>
+        <p>The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified value.</p>
+        <div class="example">
+          <p>
+            [class$="test"] {<br>
+              background: yellow;<br>
+            }
+          </p>
+        </div>
+        <h3>CSS [attribute*="value"] Selector</h3>
+        <p>The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value.</p>
+        <div class="example">
+          <p>
+            [class*="te"] {<br>
+              background: yellow;<br>
+            }
+          </p>
+        </div>
+        <h3>Styling Forms</h3>
+        <p>The attribute selectors can be useful for styling forms without class or id.</p>
+        <div class="example">
+          <p>
+            input[type="text"] {<br>
+              width: 150px;<br>
+              display: block;<br>
+              margin-bottom: 10px;<br>
+              background-color: yellow;<br>
+            }<br><br>
+            
+            input[type="button"] {<br>
+              width: 120px;<br>
+              margin-left: 35px;<br>
+              display: block;<br>
+            }
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>CSS Forms</h2>
+        <p>Another element than can be greatly improved with CSS is form.</p>
+        <h3>Styling Input Fields</h3>
+        <p>Use the width property to determine the width of the input field.</p>
+        <div class="example">
+          <p>
+            input {<br>
+              width: 100%;<br>
+            }
+          </p>
+        </div>
+        <h3>Padded Inputs</h3>
+        <p>Use the padding property to add space inside the text field. If we have many inputs, we should add margin, to add more space outside of them.</p>
+        <div class="example">
+          <p>
+            input[type=text] {<br>
+              width: 100%;<br>
+              padding: 12px 20px;<br>
+              margin: 8px 0;<br>
+              box-sizing: border-box;<br>
+            }
+          </p>
+        </div>
+        <p><strong>Note:</strong> We have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.</p>
       </section>
     </main>
         <!-- Novine u CSS-u i dodaj neke (nesting) -->
