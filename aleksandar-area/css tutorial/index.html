@@ -231,6 +231,48 @@
           <li>Browser default</li>
         </ol>
           <p>Thus, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+        <h3>CSS Specificity</h3>
+        <p>If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will be selected and its style declaration will be applied to that HTML element.</p>
+        <h3>Specificity Hierarchy</h3>
+        <p>There are four categories which define the specificity level of a selector:</p>
+        <ol>
+          <li>Inline styles - example: &lt;h1 style="color: pink;"&gt;</li>
+          <li>IDs - example: #navbar</li>
+          <li>Classes, pseudo-classes, attribute selectors - example: .test, :hover, [href]</li>
+          <li>Elements and pseudo-elements - example: h1, ::before</li>
+        </ol>
+        <h3>How to Calculate Specificity?</h3>
+        <p>We start at 0, add 100 for each id value, add 10 for each class value (or pseudo-class or attribute selector), add 1 for each element selector or pseudo-element.</p>
+        <p><strong>Note:</strong> Inline style gets a specificity value of 1000, and is always given the highest priority.</p>
+        <div class="example">
+          <p>
+            A: h1<br>
+            B: h1#content<br>
+            C: &lt;h1 id="content" style="color: pink;"&gt;Heading&lt;/h1&gt;
+          </p>
+        </div>
+        <p>
+          The specificity of A is 1 (one element selector)<br>
+          The specificity of B is 101 (one ID reference + one element selector)<br>
+          The specificity of C is 1000 (inline styling)
+        </p>
+        <p>Since the third rule (C) has the highest specificity value (1000), this style declaration will be applied.</p>
+        <p>If the same rule is written twice into the external stylesheet, then the latest rule wins.</p>
+        <p>id selectors have a higher specificity than attribute selectors.</p>
+        <p>Contextual selectors are more specific than a single element selector.</p>
+        <div class="example">
+          <p>
+            /*From external CSS file:*/<br>
+            #content h1 {background-color: red;}<br><br>
+
+            /*In HTML file:*/<br>
+            &lt;style&gt;<br>
+            #content h1 {background-color: yellow;}<br>
+            &lt;/style&gt;
+          </p>
+        </div>
+        <p>A class selector beats any number of element selectors.</p>
+        <p>The universal selector (*) and inherited values have a specificity of 0.</p>
         <h3>CSS The !important Rule</h3>
         <p>The !important rule in CSS is used to add more importance to a property/value than normal. If we use the !important rule, it will override all previous styling rules for that specific property on that element. </p>
         <div class="example">
@@ -1195,6 +1237,75 @@
           </p>
         </div>
         <p><strong>Note:</strong> We have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.</p>
+        <h3>Bordered Inputs</h3>
+        <p>Use the border property to change the border size and color, and use the border-radius property to add rounded corners, If we only want a bottom border, we will use the border-bottom property</p>
+        <h3>Coloured Inputs</h3>
+        <p>Use the background-color property to add a background colour to the input, and the color property to change the text colour.</p>
+        <h3>Focused Inputs</h3>
+        <p>By default, some browsers will add a blue outline around the input when it gets focus. We can use the :focus selector to do something with the input field when it gets focus.</p>
+        <h3>Input with icon/image</h3>
+        <p>Let's say we want an icon inside the input (like a search bar), we will use the background-image property and position it with the background-position property. We must add a large left padding to reserve the space of the icon.</p>
+        <h3>Animated Search Input</h3>
+        <p>We use the CSS transition property to animate the width of the search input when it gets focus.</p>
+        <h3>Styling Textareas</h3>
+        <p>We can use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner).</p>
+      </section>
+      <section>
+        <h2>CSS Counters</h2>
+        <p>CSS counters are like variables. The variable values can be incremented by CSS rules (which will track how many times they are used).</p>
+        <h3>Automatic Numbering With Counters</h3>
+        <p>To work with CSS counters we will use the following properties:</p>
+        <ol>
+          <li>counter-reset creates or resets a counter</li>
+          <li>counter-increment increments a counter value</li>
+          <li>content inserts generated content</li>
+          <li>counter() or counters() function adds the value of a counter to an element</li>
+        </ol>
+        <div class="example">
+          <p>
+            body {<br>
+              counter-reset: section;<br>
+            }<br><br>
+            
+            h2::before {<br>
+              counter-increment: section;<br>
+              content: "Section " counter(section) ": ";<br>
+            }
+          </p>
+        </div>
+        <p>The code above creates a counter for the page (in the body selector), then increments the counter value for each &lt;h2&gt; element and adds "Section &lt;value of the counter&gt;:" to the beginning of each &lt;h2&gt; element.</p>
+        <h3>Nesting Counters</h3>
+        <p>A counter can also be useful to make outlined lists because a new instance of a counter is automatically created in child elements</p>
+        <div class="example">
+          <p>
+            ol {<br>
+              counter-reset: section;<br>
+              list-style-type: none;<br>
+            }<br><br>
+            
+            li::before {<br>
+              counter-increment: section;<br>
+              content: counters(section,".") " ";<br>
+            }
+          </p>
+        </div>
+        <p>In the code above we use the counters() function to insert a string between different levels of nested counters.</p>
+      </section>
+      <section>
+        <h2>CSS Math Functions</h2>
+        <p>The CSS math functions allow mathematical expressions to be used as property values.</p>
+        <h3>The calc() Function</h3>
+        <p>The calc() function performs a calculation to be used as the property value.</p>
+        <p>calc(expression)</p>
+        <h3>The max() Function</h3>
+        <p>The max() function uses the largest value, from a comma-separated list of values, as the property value.</p>
+        <p>max(value1, value2, ...)</p>
+        <h3>The min() Function</h3>
+        <p>The min() function uses the smallest value, from a comma-separated list of values, as the property value.</p>
+        <p>min(value1, value2, ...)</p>
+      </section>
+      <section>
+        <h2>What's new in CSS?</h2>
       </section>
     </main>
         <!-- Novine u CSS-u i dodaj neke (nesting) -->
