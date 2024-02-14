@@ -348,6 +348,29 @@
         <p>In CSS, colours can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.</p>
         <!-- Colour representation -->
         <p>Tomato can be accessed by colour name "Tomato", or rgb(255, 99, 71), #ff6347, hsl(9, 100%, 64%).</p>
+        <h3>CSS Variables - The var() Function</h3>
+        <p>The var() function is used to insert the value of a CSS variable.</p>
+        <h3>Syntax</h3>
+        <p>var(--name, value)</p>
+        <h3>How Does var() Work?</h3>
+        <p>CSS variables can have a global (which means they can be accessed through the entire document) or local scope (which means it can be used only inside the selector where it is declared). A global variable is created by declaring it inside the :root selector. </p>
+        <div class="example">
+          <p>
+            :root {<br>
+              --blue: #1e90ff;<br>
+              --white: #ffffff;<br>
+            }
+          </p>
+        </div>
+        <p>To use the variables we declared above, we will add the var() function to insert the values of the variables in our stylesheet:</p>
+        <div class="example">
+          <p>
+            body { background-color: var(--blue); }<br><br>
+
+            h2 { border-bottom: 2px solid var(--blue); }
+          </p>
+        </div>
+        <p>The advangates of using var() are that it makes the code easier to read and easier to change the colour values.</p>
       </section>
       <section>
         <h2>CSS Backgrounds</h2>
@@ -1306,9 +1329,43 @@
       </section>
       <section>
         <h2>What's new in CSS?</h2>
+        <p>We will go over some of the new features added to CSS.</p>
+        <h3>CSS Nesting</h3>
+        <p>CSS nesting allows us to write clean and understandable code by reducing redundancy and grouping lines.</p>
+        <h3>Syntax</h3>
+        <p>& nesting selector</p>
+        <p>Before CSS nesting:</p>
+        <div class="example">
+          <p>
+            .parent-rule {<br>
+              /* parent rule style properties */<br>
+            }<br><br>
+            
+            .parent-rule .child-rule {<br>
+              /* style properties for .child-rule descendants for .parent-rule ancestors */<br>
+            }
+          </p>
+        </div>
+        <p>Now, nesting provides us the ability to nest one style rule inside another:</p>
+        <div class="example">
+          <p>
+            .parent-rule {<br>
+              /* parent rule properties */<br>
+              .child-rule {<br>
+                /* child rule properties */<br>
+              }<br>
+            }
+          </p>
+        </div>
+        <h3>Selector :has()</h3>
+        <p>With the :has() selector, we can apply styles by checking if a parent element contains specific children, or if those children are in a specific state.</p>
+        <p>We have different syntax for this selector:</p>
+        <ul>
+          <li>h1:has(p): Selects the &lt;h1&gt; who have a &lt;p&gt; tag as a child no matter the level of it.</li>
+          <li>h1:has(> p): Selects the &lt;h1&gt; who have a &lt;p&gt; tag as a direct child.</li>
+          <li>h1:has(+ p): Selects the &lt;h1&gt; who are directly followed by a &lt;p&gt; tag.</li>
+        </ul>
       </section>
     </main>
-        <!-- Novine u CSS-u i dodaj neke (nesting) -->
-        <!-- CSS Variables - The var() Function -->
   </body>
 </html>
