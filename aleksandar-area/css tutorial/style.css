@@ -9,7 +9,6 @@
     background-color: purple;
     color: orange;
   }
-  
 }
 
 .theme-light {
@@ -24,3 +23,93 @@
   background-color: yellowgreen;
   color: blueviolet;
 } */
+
+* {
+  box-sizing: border-box;
+}
+
+.example {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 60%;
+  border: 1px solid black;
+}
+
+.example > div {
+  float: left;
+  width: 50%;
+  padding: 30px;
+}
+
+/* ::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+/* .example-left {
+  padding: 10px;
+  flex: 50%;
+  margin: 10px;
+}
+
+.example-right {
+  padding: 10px;
+  flex: 50%;
+  margin: 10px;
+} */
+
+.colour-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2px;
+  padding: 10px;
+}
+
+.colour-container > div {
+  color: white; 
+  text-align: center;
+  padding: 15px;
+}
+
+#colour1 {
+  background-color: Tomato;
+}
+
+#colour2 {
+  background-color: Orange;
+}
+
+#colour3 {
+  background-color: DodgerBlue;
+}
+
+#colour4 {
+  background-color: MediumSeaGreen;
+}
+
+#colour5 {
+  background-color: Gray;
+}
+
+#colour6 {
+  background-color: SlateBlue;
+}
+
+#colour7 {
+  background-color: Violet;
+}
+
+#colour8 {
+  background-color: LightGray;
+}
+
+#font-sofia {
+  font-family: "Sofia", sans-serif;
+  font-size: 20px;
+}
+
+#bigben {
+  width: 100%;
+}
