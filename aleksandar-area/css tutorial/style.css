@@ -1,7 +1,7 @@
-/* .theme-dark .example {
-  background-color: black;
-  color: white;
-} */
+* {
+  box-sizing: border-box;
+}
+
 .theme-dark {
   background: black;
   color: white;
@@ -19,14 +19,6 @@
     color: blueviolet;
   }
 }
-/* .example {
-  background-color: yellowgreen;
-  color: blueviolet;
-} */
-
-* {
-  box-sizing: border-box;
-}
 
 .example {
   display: flex;
@@ -42,28 +34,9 @@
   padding: 30px;
 }
 
-/* ::after {
-  content: "";
-  clear: both;
-  display: table;
-} */
-
-/* .example-left {
-  padding: 10px;
-  flex: 50%;
-  margin: 10px;
-}
-
-.example-right {
-  padding: 10px;
-  flex: 50%;
-  margin: 10px;
-} */
-
 .colour-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  gap: 2px;
   padding: 10px;
 }
 
@@ -117,3 +90,9 @@
 /* q {
   font-style: italic;
 } */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

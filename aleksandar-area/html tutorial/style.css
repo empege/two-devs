@@ -130,3 +130,8 @@ footer {
 #upButton img {
   width: 30px;
 }
+
+::selection {
+  color: white;
+  background: blue;;
+}
