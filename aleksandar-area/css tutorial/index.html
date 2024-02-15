@@ -7,22 +7,27 @@
     <script src="javascript.js" defer></script>
   </head>
   <body>
+
     <header>
       <h1>Now let's learn CSS!</h1>
       <p><q>Creativity doesn't wait for that perfect moment. It fashions its own perfect moments out of ordinary ones.</q> - Bruce Garrabrandt</p>
     </header>
+
     <nav>
       <ul>
         <li></li>
       </ul>
     </nav>
+
     <main>
+
       <section>
         <h2>What is CSS?</h2>
         <p><abbr title="Cascading Style Sheets">CSS</abbr> is a stylesheet language we use to style a Web page. It describes how HTML elements are to be displayed on screen and can control the layout of multiple web pages all at once.</p>
         <h2>Why use CSS?</h2>
         <p>We use CSS to define styles for our web pages, including the design, layout and variations in display for different devices and screen sizes. CSS removed the style formatting from the HTML page. The style definitions are normally saved in external .css files. With an external stylesheet file, we can change the look of an entire website by changing just one file.</p>
       </section>
+
       <section>
         <h2>CSS Syntax</h2>
         <p>CSS consists of a selector and a declaration block.</p>
@@ -34,6 +39,7 @@
         <p>color is a property, and blue is the property value.</p>
         <p>font-size is a property, and 12 pixels is the property value.</p>
       </section>
+
       <section>
         <h2>CSS Selectors</h2>
         <p>CSS selectors are used to "find" (or select) the HTML elements we want to style.</p>
@@ -145,6 +151,7 @@
           </p>
         </div>
       </section>
+      
       <section>
         <h2>How Do We Add CSS?</h2>
         <p>There are three ways to insert CSS:</p>
@@ -358,7 +365,7 @@
         <h3>CSS Colour Values</h3>
         <p>In CSS, colours can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.</p>
         <p>Tomato can be accessed by colour name "Tomato", or rgb(255, 99, 71), #ff6347, hsl(9, 100%, 64%).</p>
-        <div style="text-align: center;padding: 5px;">
+        <div style="text-align: center;padding: 5px; width: 80%;margin-left:auto;margin-right: auto;">
           <div style="color:white;background-color:hsl(9, 100%, 64%);margin-bottom:10px;padding: 10px;">rgb(255, 99, 71)</div>
           <div style="color:white;background-color:#ff6347;margin-bottom: 10px;padding:10px;">#ff6347</div>
           <div style="color:white;background-color:hsl(9, 100%, 64%);padding: 10px;">hsl(9, 100%, 64%)</div>
@@ -390,6 +397,11 @@
       <section>
         <h2>CSS Backgrounds</h2>
         <p>The CSS background properties are used to add background effects for elements. The properties are:</p>
+        <div style="background-color: lightblue; height:150px; width: 80%;
+        padding: 10px 20px; margin-left: auto; margin-right: auto;">
+          <h3>This is a heading</h3>
+          <p>This is a paragraph.</p>
+        </div>
         <ul>
           <li>background-color</li>
           <li>background-image</li>
@@ -1219,6 +1231,12 @@
       <section>
         <h2>CSS Opacity / Transparency</h2>
         <p>The opacity property specifies the opacity/transparency of an element.</p>
+        <div style="display: flex; width: 80%; margin-left: auto;margin-right: auto;">
+          <div style="text-align: center; width: 25%;background-color: #3399ff; padding: 15px;"><p>opacity 1 (default)</p></div>
+          <div style="opacity: 0.6; text-align: center;width: 25%;background-color: #3399ff;padding: 15px;"><p>opacity 0.6</p></div>
+          <div style="opacity: 0.3;text-align: center;width: 25%;background-color: #3399ff;padding: 15px;"><p>opacity 0.3</p></div>
+          <div style="opacity: 0.1;text-align: center;width: 25%;background-color: #3399ff;padding: 15px;"><p>opacity 0.1</p></div>
+        </div>
         <h3>Transparent Image</h3>
         <p>The opacity property can take a value from 0.0 - 1.0. The lower the value, the more transparent.</p>
         <h3>Transparent Hover Effect</h3>
@@ -1228,25 +1246,45 @@
         <h2>CSS Navigation Bar</h2>
         <h3>Navigation Bar = List of Links</h3>
         <p>To create a navigation bar, we need standard HTML as a base. It is a list of links, so we will use the &lt;ul&gt; and &lt;li&gt; elements.</p>
-        <div>
-          <p>
-            &lt;ul&gt;<br>
-              &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
-              &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;<br>
-              &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
-              &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
-            &lt;/ul&gt;
-          </p>
+        <div class="example">
+          <div class="example-left" style="text-align: left;">
+            <p>
+              &lt;ul&gt;<br>
+                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;<br>
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+              &lt;/ul&gt;
+            </p>
+          </div>
+          <div class="example-right">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#news">News</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
         </div>
         <p>To make our list a navigation bar, we will add the following CSS:</p>
-        <div>
-          <p>
-            ul {<br>
-              list-style-type: none;<br>
-              margin: 0;<br>
-              padding: 0;<br>
-            }
-          </p>
+        <div class="example">
+          <div class="example-left" style="text-align: left;">
+            <p>
+              ul {<br>
+                list-style-type: none;<br>
+                margin: 0;<br>
+                padding: 0;<br>
+              }
+            </p>
+          </div>
+          <div class="example-right">
+            <ul style="list-style-type: none;">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#news">News</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
         </div>
         <p>The list-style-type: none; removes the bullets. A navigation bar does not need list markers. margin: 0; and padding: 0; to remove browser default settings.</p>
         <h3>Vertical Navigation Bar</h3>
@@ -1259,8 +1297,20 @@
           </p>
         </div>
         <p>display: block; - displays the links as block elements which makes the whole link area clickable and it allows us to specify the width.</p>
+        <ul class="vertical-navbar">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
         <h3>Horizontal Navigation Bar</h3>
         <p>We can create a horizontal navigation bar by using inline or floating list items.</p>
+        <ul class="horizontal-navbar">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
         <h3>Inline List Items</h3>
         <p>The first way is to specify the &lt;li&gt; elements as inline:</p>
         <div>
@@ -1287,6 +1337,7 @@
         <p>float: left; floats elements next to each other, display: block; allows us to specify padding.</p>
       </section>
       <section>
+        <!-- Continue -->
         <h2>CSS Dropdowns</h2>
         <p>A dropdown is a list of options that is revealed only when a user interacts with the menu by clicking or hovering over it with their cursor.</p>
         <p>To create a basic dropdown, we will use any element to open the dropdown content, like a &lt;span&gt; or &lt;button&gt; element. Then we will use a container element, like &lt;div&gt;, to create the dropdown content and add what we want. We will wrap a &lt;div&gt; element around the elements to position the dropdown content correctly using CSS.</p>
