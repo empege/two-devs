@@ -1468,7 +1468,7 @@
         </div>
         <form>
           <label for="fname">First Name</label>
-          <input type="text" id="fname" name="fname" style="width: 100%;">
+          <input type="text" name="fname" style="width: 100%;">
         </form>
         <h3>Padded Inputs</h3>
         <p>Use the padding property to add space inside the text field. If we have many inputs, we should add margin, to add more space outside of them.</p>
@@ -1485,14 +1485,22 @@
         <p><strong>Note:</strong> We have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.</p>
         <h3>Bordered Inputs</h3>
         <p>Use the border property to change the border size and color, and use the border-radius property to add rounded corners, If we only want a bottom border, we will use the border-bottom property</p>
+        <form>
+          <label for="fname">First Name</label>
+          <input type="text" name="fname" style="border: 2px solid red;">
+        </form>
         <h3>Coloured Inputs</h3>
         <p>Use the background-color property to add a background colour to the input, and the color property to change the text colour.</p>
+        <form>
+          <label for="fname">First Name</label>
+          <input type="text" name="fname" style="background-color: #3CBC8D;color: white;">
+        </form>
         <h3>Focused Inputs</h3>
         <p>By default, some browsers will add a blue outline around the input when it gets focus. We can use the :focus selector to do something with the input field when it gets focus.</p>
-        <h3>Input with icon/image</h3>
-        <p>Let's say we want an icon inside the input (like a search bar), we will use the background-image property and position it with the background-position property. We must add a large left padding to reserve the space of the icon.</p>
-        <h3>Animated Search Input</h3>
-        <p>We use the CSS transition property to animate the width of the search input when it gets focus.</p>
+        <form>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname">
+        </form>
         <h3>Styling Textareas</h3>
         <p>We can use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner).</p>
       </section>

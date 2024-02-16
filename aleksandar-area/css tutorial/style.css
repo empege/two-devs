@@ -100,7 +100,6 @@
 }
 
 ::selection {
-  color: red;
   background: yellow;
 }
 
@@ -148,6 +147,8 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  padding: 20px;
+  border: 1px solid black;
 }
 
 .dropdown-content {
@@ -162,4 +163,8 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+#fname:focus {
+  background-color: lightblue;
 }
