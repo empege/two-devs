@@ -50,24 +50,6 @@ section {
   margin: 20px;
 }
 
-.theme-dark {
-  background: black;
-  color: white;
-  .example {
-    background-color: purple;
-    color: orange;
-  }
-}
-
-.theme-light {
-  background: white;
-  color: black;
-  .example {
-    background-color: yellowgreen;
-    color: blueviolet;
-  }
-}
-
 .example {
   display: flex;
   justify-content: center;
@@ -76,13 +58,6 @@ section {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  /* & .example-left {
-    line-height: 100px;
-  }
-  & .example-right p {
-    line-height: 50px;
-    vertical-align: middle;
-  } */
 }
 
 .example > div {
@@ -90,15 +65,6 @@ section {
   width: 50%;
   padding: 20px;
 }
-
-/* .example-left {
-  line-height: 100px;
-}
-
-.example-right p {
-  line-height: 50px;
-  vertical-align: middle;
-} */
 
 .colour-container {
   display: grid;

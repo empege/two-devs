@@ -56,12 +56,12 @@
         <h2>The CSS element Selector</h2>
         <p>The element selector selects HTML elements based on the element name.</p>
         <div class="example">
-          <div class="example-left">
+          <div>
             <p>p {color: red;}</p>
           </div>
-          <div class="example-right">
-          <p style="color:red;text-align: center;">This is a paragraph.</p>
-          <p style="color:red;text-align: center;">This is a paragraph.</p>
+          <div>
+            <p style="color:red;text-align: center;">This is a paragraph.</p>
+            <p style="color:red;text-align: center;">This is a paragraph.</p>
           </div>
         </div>
         <h2>The CSS id Selector</h2>
@@ -69,12 +69,12 @@
         <p>The id of an element is unique within a page, so the id selector is used to select one unique element.</p>
         <p>To select an element with a specific id, write a hashtag (#), followed by the id of the element.</p>
         <div class="example">
-          <div class="example-left">
+          <div>
             <p>#p1 {color: red;}</p>
           </div>
-          <div class="example-right">
-          <p>This is a paragraph.</p>
-          <p style="color: red;text-align:center;">This is a paragraph.</p>
+          <div>
+            <p>This is a paragraph.</p>
+            <p style="color: red;text-align:center;">This is a paragraph.</p>
           </div>
         </div>
         <p>The CSS rule will only apply to the paragraph with the id="p1".</p>
@@ -83,23 +83,23 @@
         <p>The class selector selects HTML elements with a specific class attribute.</p>
         <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
         <div class="example">
-          <div class="example-left">
+          <div>
             <p>.center {color: red;}</p>
           </div>
-          <div class="example-right">
-          <p>This is a paragraph.</p>
-          <p style="color: red;text-align:center;">This is a paragraph.</p>
+          <div>
+            <p>This is a paragraph.</p>
+            <p style="color: red;text-align:center;">This is a paragraph.</p>
           </div>
         </div>
         <p>All elements with class="center" will be red.</p>
         <p>We can also specify that only specific elements should be affected by a class.</p>
         <div class="example">
-          <div class="example-left">
+          <div>
             <p>p.center {color: red;}</p>
           </div>
-          <div class="example-right">
-          <p>This is a paragraph.</p>
-          <p style="color:red;text-align:center;">This is a paragraph.</p>
+          <div>
+            <p>This is a paragraph.</p>
+            <p style="color:red;text-align:center;">This is a paragraph.</p>
           </div>
         </div>
         <p>Only &lt;p&gt; elements with class="center" will be red.</p>
@@ -203,11 +203,11 @@
         <h3>Inline CSS</h3>
         <p>An inline style may be used to apply a unique style for a single element. To use inline styles, we add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
         <div class="example">
-          <div class="example-left">
+          <div>
             <p>&lt;h1 style="color:blue;"&gt;This is a heading&lt;/h1&gt;</p>
             <p>&lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;</p>
           </div>
-          <div class="example-right">
+          <div>
             <p style="color:blue;">This is a heading</p>
             <p style="color:red;">This is a paragraph.</p>
           </div>
@@ -310,6 +310,7 @@
         </div>
         <p>Even though the id selector and the class selector have a higher specificity, the !important rule overrides the background-color property in both cases.</p>
       </section>
+
       <section>
         <h2>CSS Comments</h2>
         <p>Like with HTML comments, CSS comments are not displayed in the browser, but they can help to explain our source code. A CSS comment is placed inside the &lt;style&gt; element, and starts with /* and ends with */:</p>
@@ -325,6 +326,7 @@
           </p>
         </div>
       </section>
+
       <section>
         <h2>CSS Colours</h2>
         <h3>CSS Colour Names</h3>
@@ -355,12 +357,12 @@
         <h3>CSS Text Colour</h3>
         <p>We can set the colour of text:</p>
         <div class="example">
-          <div class="example-left">
+          <div>
             <p>&lt;h1 style="color:Tomato;"&gt;Hello World&lt;/h1&gt;</p>
             <p>&lt;p style="color:DodgerBlue;"&gt;Lorem ipsum...&lt;/p&gt;</p>
             <p>&lt;p style="color:MediumSeaGreen;"&gt;Ut wisi enim...&lt;/p&gt;</p>
           </div>
-          <div class="example-right">
+          <div>
             <p style="color:tomato">Hello World</p>
             <p style="color:dodgerblue">Lorem ipsum...</p>
             <p style="color:mediumseagreen">Ut wisi enim...</p>
@@ -369,12 +371,12 @@
         <h3>CSS Border Colour</h3>
         <p>We can set the colour of borders:</p>
         <div class="example">
-        <div class="example-left">
+        <div>
           <p>&lt;h1 style="border:2px solid Tomato;"&gt;Hello World&lt;/h1&gt;</p>
           <p>&lt;h1 style="border:2px solid DodgerBlue;"&gt;Hello World&lt;/h1&gt;</p>
           <p>&lt;h1 style="border:2px solid Violet;"&gt;Hello World&lt;/h1&gt;</p>
         </div>
-        <div class="example-right">
+        <div>
           <p style="border:2px solid tomato">This is a heading</p>
           <p style="border:2px solid dodgerblue">This is a heading</p>
           <p style="border:2px solid violet">This is a heading</p>
@@ -412,6 +414,7 @@
         </div>
         <p>The advangates of using var() are that it makes the code easier to read and easier to change the colour values.</p>
       </section>
+
       <section>
         <h2>CSS Backgrounds</h2>
         <p>The CSS background properties are used to add background effects for elements. The properties are:</p>
@@ -508,6 +511,7 @@
         </div>
           <p>To specify that the background image should scroll with the rest of the page, use background-attachment: scroll.</p>
       </section>
+
       <section>
         <h2>CSS Borders</h2>
         <p>The CSS border properties allow us to specify the style, width, and colour of an element's border. Like with background, we can use the border shorthand to shorten the code.</p>
@@ -532,6 +536,7 @@
         <p>The border-radius property is used to add rounded borders to an element.</p>
         <p style="border:2px solid red;border-radius: 10px;">This is a paragraph.</p>
       </section>
+
       <section>
         <h2>CSS Margins</h2>
         <p>The CSS margin properties are used to create space around elements, outside of any defined borders. With CSS, we have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).</p>
@@ -566,6 +571,7 @@
           </p>
         </div>
       </section>
+
       <section>
         <h2>CSS Padding</h2>
         <p>Padding is used to create space around an element's content, inside of any defined borders. With CSS, we have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</p>
@@ -595,6 +601,7 @@
           </p>
         </div>
       </section>
+
       <section>
         <h2>CSS Height, Width and Max-width</h2>
         <p>The CSS height and width properties are used to set the height and width of an element.</p>
@@ -613,18 +620,18 @@
         <p>The max-width can be specified in length values, like px, cm, or in percent (%) of the containing block, or set to none.</p>
         <p>Let's say we have a &lt;div&gt; element with a width of 500px. If the browser window is smaller than the width of the element, it will add a horizontal scrollbar to our page. To improve the browser's handling of small windows, we can use max-width solve this problem.</p>
       </section>
+
       <section>
         <h2>CSS Box Model</h2>
         <p>In CSS, the term "box model" is used when talking about design and layout. It is essentially a box that wraps around every HTML element and it consists of: content, padding, borders and margins.</p>
-        <div style="margin-left: auto; margin-right: auto;">
-          <div style="background-color: lightgrey;width: 300px;border: 15px solid green;padding: 50px;margin: 20px;">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border.
-          </div>
+        <div style="background-color: lightgrey;width: 300px;border: 15px solid green;padding: 50px; margin: auto;">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border.
         </div>
         <p>In order to set the width and height of an element correctly in all browsers, we need to know how the box model works.</p>
         <p>When we set the width and height properties of an element with CSS, we just set the width and height of the content area. To calculate the total width and height of an element, we must also include the padding and borders.</p>
         <p>The total width of an element should be calculated like this:<br> Total element width = width + left padding + right padding + left border + right border</p>
         <p>The total height of an element should be calculated like this:<br> Total element height = height + top padding + bottom padding + top border + bottom border</p>
       </section>
+
       <section>
         <h2>CSS Outline</h2>
         <p>An outline is a line drawn outside the element's border. CSS has the following outline properties: outline-style, outline-color, outline-width, outline-offset and the shorthand outline.</p>
@@ -638,17 +645,18 @@
         <h3>CSS Outline - Shorthand property</h3>
         <p>The outline property is a shorthand property for setting the following individual outline properties: outline-width, outline-style (required) and outline-color.</p>
       </section>
+
       <section>
         <h2>CSS Text</h2>
         <p>CSS has a lot of properties for formatting text.</p>
         <h3>Text Colour</h3>
         <p>The colour property is used to set the colour of the text. The colour is specified by: a colour name, a HEX value or an RGB value.</p>
         <div class="example">
-          <div class="example-left">
+          <div>
             <p>body {color: blue;}</p>
             <p>h1 {color: green;}</p>
           </div>
-          <div class="example-right">
+          <div>
             <h3 style="color:green;">This is a heading</h3>
             <p style="color:blue">This is a paragraph.</p>
           </div>
@@ -692,6 +700,7 @@
         <p>The text-shadow property adds shadow to text.</p>
         <p style="text-shadow: 2px 2px 5px red;">This is a paragraph.</p>
       </section>
+
       <section>
         <h2>CSS Fonts</h2>
         <p>Choosing the right font has a huge impact on how the readers experience a website. Using a font that is easy to read is important. The font adds value to our text. It is also important to choose the correct colour and text size for the font.</p>
@@ -742,19 +751,20 @@
         </div>
         <p id="font-sofia">This is a paragraph.</p>
       </section>
+
       <section>
         <h2>CSS Links</h2>
         <p>With CSS, links can be styled in many different ways.</p>
         <h3>Styling Links</h3>
         <p>Links can be styled with any CSS property, like color, font-family, background.</p>
-        <div>
-          <p>
-            a {<br>
-              color: hotpink;<br>
-            }
-          </p>
+        <div class="example">
+          <div>
+            <p>a {color: hotpink;}</p>
+          </div>
+          <div>
+          <a href="#" style="color:hotpink">This is a link</a>
+          </div>
         </div>
-        <a href="#" style="color:hotpink">This is a link</a>
         <p>We can also style the links differently depending on what state they are in:</p>
         <uL>
           <li>a:link - a normal, unvisited link</li>
@@ -764,11 +774,26 @@
         </uL>
         <h3>Text Decoration</h3>
         <p>The text-decoration property is mostly used to remove underlines from links.</p>
-        <a href="#" style="text-decoration: none;">This is a link</a>
+        <div class="example">
+          <div>
+            <p>a:link {text-decoration: none;}</p>
+          </div>
+          <div>
+          <a href="#" style="text-decoration: none;">This is a link</a>
+          </div>
+        </div>
         <h3>Background Color</h3>
         <p>The background-color property can be used to specify a background colour for links.</p>
-        <a href="#" style="background-color: yellow;">This is a link</a>
+        <div class="example">
+          <div>
+            <p>a:link {background-color: yellow;}</p>
+          </div>
+          <div>
+            <a href="#" style="background-color: yellow;">This is a link</a>
+          </div>
+        </div>
       </section>
+
       <section>
         <h2>CSS Lists</h2>
         <h3>HTML Lists and CSS List Properties</h3>
@@ -812,6 +837,7 @@
           <li style="background: #cce5ff;margin: 5px;">Coca Cola</li>
         </ul>
       </section>
+
       <section>
         <h2>CSS Tables</h2>
         <p>With CSS, HTML tables can be greatly improved.</p>
@@ -855,6 +881,7 @@
           </p>
         </div>
       </section>
+
       <section>
         <h2>CSS Display</h2>
         <p>The display property is used to specify how an element is shown on a web page. Like we learned in the HTML tutorial, elements have block and inline display values. The display property is used to change the default display behavior of HTML elements.</p>
@@ -869,6 +896,7 @@
         <p>Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.</p>
         <p>One common use for display: inline-block is to display list items horizontally instead of vertically, like navigation links.</p>
       </section>
+
       <section>
         <h2>CSS Position</h2>
         <p>The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).</p>
@@ -893,6 +921,7 @@
         </div>
         <p>An element with position: sticky; is positioned based on the user's scroll position. A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place.</p>
       </section>
+
       <section>
         <h2>CSS Z-index</h2>
         <p>The z-index property specifies the stack order of an element.</p>
@@ -904,6 +933,7 @@
           <div style="position: absolute;z-index: 2;background: lightgreen;width: 35%;left: 270px;top: -15px;height: 100px;">Green box (z-index: 2)</div>
         </div>
       </section>
+
       <section>
         <h2>CSS Overflow</h2>
         <p>The CSS overflow property controls what happens to content that is too big to fit into an area, whether to clip the content or to add scrollbars. The overflow property has the following values:</p>
@@ -915,6 +945,7 @@
         </ul>
         <div style="background: #4CAF50;color: white;padding: 15px;width: 50%;height: 100px;overflow: scroll;border: 1px solid #ccc; ">This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
       </section>
+
       <section>
         <h2>CSS Float</h2>
         <p>The CSS float property specifies how an element should float.</p>
@@ -955,6 +986,7 @@
           </p>
         </div>
       </section>
+
       <section>
         <h2>CSS Align</h2>
         <p>Let's see how we can center elements horizontally and vertically.</p>
@@ -1101,6 +1133,7 @@
         </div>
         <div style="display: flex;justify-content: center;align-items: center;height: 200px;border: 3px solid green;">This &lt;div&gt; is vertically and horizontally centered.</div>
       </section>
+
       <section>
         <h2>CSS Combinators</h2>
         <p>A combinator is something that explains the relationship between the selectors. A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.</p>
@@ -1123,7 +1156,7 @@
         <div>
           <p style="background-color: yellow;">Paragraph 1 in the div.</p>
           <p style="background-color: yellow;">Paragraph 2 in the div.</p>
-          <section style="background-color: yellow;"><p>Paragraph 3 in the div.</p></section>
+          <p style="background-color: yellow;">Paragraph 3 in the div.</p>
         </div>
         <p>Paragraph 4. Not in a div.</p>
         <p>Paragraph 5. Not in a div.</p>
@@ -1139,9 +1172,9 @@
         <div>
           <p style="background-color: yellow;">Paragraph 1 in the div.</p>
           <p style="background-color: yellow;">Paragraph 2 in the div.</p>
-          <section>
+          <div class="section">
             <p>Paragraph 3 in the div (inside a section element).</p>
-          </section>
+          </div>
           <p style="background-color: yellow;">Paragraph 4 in the div.</p>
         </div>
         <p>Paragraph 5. Not in a div.</p>
@@ -1184,6 +1217,7 @@
         <code>Some code.</code>
         <p style="background-color: yellow;">Paragraph 4.</p>
       </section>
+
       <section>
         <h2>CSS Pseudo-class</h2>
         <h3>What are Pseudo-classes?</h3>
@@ -1210,6 +1244,7 @@
         <h3>CSS - The :first-child Pseudo-class</h3>
         <p>The :first-child pseudo-class matches a specified element that is the first child of another element.</p>
       </section>
+
       <section>
         <h2>CSS Pseudo-element</h2>
         <p>A CSS pseudo-element is used to style specified parts of an element, like style the first letter, or line, insert content before, or after the content.</p>
@@ -1244,6 +1279,7 @@
         <h3>CSS - The ::selection Pseudo-element</h3>
         <p>The ::selection pseudo-element matches the portion of an element that is selected by a user. Color, background, cursor and outline can be applied to ::selection.</p>
       </section>
+
       <section>
         <h2>CSS Opacity / Transparency</h2>
         <p>The opacity property specifies the opacity/transparency of an element.</p>
@@ -1258,12 +1294,13 @@
         <h3>Transparent Hover Effect</h3>
         <p>The opacity property is often used together with the :hover selector to change the opacity on mouse-over.</p>
       </section>
+
       <section>
         <h2>CSS Navigation Bar</h2>
         <h3>Navigation Bar = List of Links</h3>
         <p>To create a navigation bar, we need standard HTML as a base. It is a list of links, so we will use the &lt;ul&gt; and &lt;li&gt; elements.</p>
         <div class="example">
-          <div class="example-left" style="text-align: left;">
+          <div style="text-align: left;">
             <p>
               &lt;ul&gt;<br>
                 &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
@@ -1273,7 +1310,7 @@
               &lt;/ul&gt;
             </p>
           </div>
-          <div class="example-right">
+          <div>
             <ul>
               <li><a href="#home">Home</a></li>
               <li><a href="#news">News</a></li>
@@ -1284,7 +1321,7 @@
         </div>
         <p>To make our list a navigation bar, we will add the following CSS:</p>
         <div class="example">
-          <div class="example-left" style="text-align: left;">
+          <div style="text-align: left;">
             <p>
               ul {<br>
                 list-style-type: none;<br>
@@ -1293,7 +1330,7 @@
               }
             </p>
           </div>
-          <div class="example-right">
+          <div>
             <ul style="list-style-type: none;">
               <li><a href="#home">Home</a></li>
               <li><a href="#news">News</a></li>
@@ -1352,6 +1389,7 @@
         </div>
         <p>float: left; floats elements next to each other, display: block; allows us to specify padding.</p>
       </section>
+
       <section>
         <h2>CSS Dropdowns</h2>
         <p>A dropdown is a list of options that is revealed only when a user interacts with the menu by clicking or hovering over it with their cursor.</p>
@@ -1365,6 +1403,7 @@
           </div>
         </div>
       </section>
+
       <section>
         <h2>CSS Attribute Selectors</h2>
         <p>We can style HTML elements that have specific attributes or attribute values.</p>
@@ -1470,6 +1509,7 @@
           </p>
         </div>
       </section>
+
       <section>
         <h2>CSS Forms</h2>
         <p>Another element than can be greatly improved with CSS is form.</p>
@@ -1520,6 +1560,7 @@
         <h3>Styling Textareas</h3>
         <p>We can use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner).</p>
       </section>
+
       <section>
         <h2>CSS Counters</h2>
         <p>CSS counters are like variables. The variable values can be incremented by CSS rules (which will track how many times they are used).</p>
@@ -1561,6 +1602,7 @@
         </div>
         <p>In the code above we use the counters() function to insert a string between different levels of nested counters.</p>
       </section>
+
       <section>
         <h2>CSS Math Functions</h2>
         <p>The CSS math functions allow mathematical expressions to be used as property values.</p>
@@ -1574,6 +1616,7 @@
         <p>The min() function uses the smallest value, from a comma-separated list of values, as the property value.</p>
         <p>min(value1, value2, ...)</p>
       </section>
+
       <section>
         <h2>What's new in CSS?</h2>
         <p>We will go over some of the new features added to CSS.</p>
@@ -1613,6 +1656,10 @@
           <li>h1:has(+ p): Selects the &lt;h1&gt; who are directly followed by a &lt;p&gt; tag.</li>
         </ul>
       </section>
+
+      <footer>
+        <p>The authours of this tutorial are Ivan and Aleksandar.</p>
+      </footer>
     </main>
   </body>
 </html>
