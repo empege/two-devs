@@ -196,3 +196,9 @@ section {
 #fname:focus {
   background-color: lightblue;
 }
+
+footer {
+  background-color: #000;
+  color: aliceblue;
+  padding: 10px;
+}
